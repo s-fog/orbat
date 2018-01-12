@@ -40,10 +40,10 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                '<alias1>/<alias2>' => 'textpage/view',
                 'catalog/<alias1>/<alias2>' => 'catalog/view',
                 'catalog/<alias1>' => 'catalog/index',
                 'catalog' => 'catalog/index',
+                '<alias1>/<alias2>' => 'textpage/view',
                 '<alias>' => 'textpage/index'
             ],
         ],
