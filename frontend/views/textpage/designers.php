@@ -48,10 +48,18 @@ $this->params['name'] = $model->name;
                         </div>
                         <div class="designersList__right">
                             <div class="designersList__st"><?=$designer->studio?></div>
-                            <div class="designersList__address"><?=$designer->address?></div>
-                            <a href="tel:<?=$designer->phone1?>" class="designersList__phone"><?=$designer->phone1?></a>
-                            <a href="tel:<?=$designer->phone2?>" class="designersList__phone"><?=$designer->phone2?></a>
-                            <a href="http://<?=$designer->site?>" target="_blank" rel="nofollow" class="designersList__email"><?=$designer->site?></a>
+                            <?php if (!empty($designer->address)) { ?>
+                                <div class="designersList__address"><?=$designer->address?></div>
+                            <?php } ?>
+                            <?php if (!empty($designer->phone1)) { ?>
+                                <a href="tel:<?=$designer->phone1?>" class="designersList__phone"><?=$designer->phone1?></a>
+                            <?php } ?>
+                            <?php if (!empty($designer->phone2)) { ?>
+                                <a href="tel:<?=$designer->phone2?>" class="designersList__phone"><?=$designer->phone2?></a>
+                            <?php } ?>
+                            <?php if (!empty($designer->site)) { ?>
+                                <a href="http://<?=$designer->site?>" target="_blank" rel="nofollow" class="designersList__email"><?=$designer->site?></a>
+                            <?php } ?>
                             <a href="#callback" class="designersList__button js-consult" data-fancybox>Закзать консультацию архитектора</a>
                         </div>
                     </div>

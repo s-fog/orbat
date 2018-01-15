@@ -13,7 +13,7 @@ use yii\widgets\ActiveForm;
             <div class="mainFooter__left">
                 <a href="/" class="mainFooter__logo"></a>
                 <div class="mainFooter__copy">© 1992–2018 ОРБАТ. Все права защищены.</div>
-                <a href="#" target="_blank" class="mainFooter__prav"><span>Обработка персональных данных</span></a>
+                <a href="/00_doc.pdf" target="_blank" class="mainFooter__prav"><span>Обработка персональных данных</span></a>
             </div>
             <div class="mainFooter__middle">
                 <div class="mainFooter__middleLeft">
@@ -104,7 +104,7 @@ $form = ActiveForm::begin([
             'placeholder' => 'E-mail'
         ])->label(false)?>
     <?=$form->field($callbackForm, 'phone')
-        ->textarea([
+        ->textInput([
             'class' => 'callback__input',
             'placeholder' => 'Телефон'
         ])->label(false)?>

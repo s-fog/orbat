@@ -49,18 +49,13 @@ $this->params['name'] = $model->name;
             <div class="product__item">
                 <div class="product__itemInner">
                     <div class="product__peopleInner">
-                        <div class="product__peopleImage" style="background-image: url(/img/desig1.png);"></div>
+                        <div class="product__peopleImage" style="background-image: url(<?=$model->designer->image?>);"></div>
                         <div class="product__peopleRight">
-                            <div class="product__peopleName">Евгения и Павел Богатырёвы</div>
+                            <div class="product__peopleName"><?=$model->designer->name?></div>
                             <div class="product__peopleAuthor">Авторы проекта</div>
                         </div>
                     </div>
-                    <div class="product__peopleText">Учредители дизайн-студии «Mobile Line Decor» Евгения и Павел Богатырёвы вот уже почти
-                        20 лет занимаются комплектацией эксклюзивных интерьеров класса люкс. При работе придерживаются двух аксиом: «стройка
-                        должна быть в радость» и «нельзя идти
-                        на компромиссы при постройке своего дома». Избегать компромиссов в проектах помогает наличие в компании трех собственных производств — столярного, текстильного
-                        и карнизного.
-                    </div>
+                    <div class="product__peopleText"><?=$model->designer->product_text?></div>
                 </div>
             </div>
             <?php

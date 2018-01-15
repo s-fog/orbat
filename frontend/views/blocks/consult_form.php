@@ -41,7 +41,7 @@ $form = ActiveForm::begin([
     <button type="submit" class="mainForm__submit"><span>Заказать консультацию</span></button>
 </div>
 <div class="mainForm__textWrapper">
-    <div class="mainForm__text">Заказываю консультацию, Вы соглашаетесь с условиями <a href="#"><span>обработки персональных данных</span></a>.</div>
+    <div class="mainForm__text">Заказываю консультацию, Вы соглашаетесь с условиями <a href="/00_doc.pdf" target="_blank"><span>обработки персональных данных</span></a>.</div>
 </div>
 
 <?=$form->field($consultForm, 'type')
