@@ -59,7 +59,7 @@ abstract class Category extends \yii\db\ActiveRecord
             'seo_keywords' => 'Seo Keywords',
             'seo_h1' => 'Seo H1',
             'seo_description' => 'Seo Description',
-            'image' => 'Изображение',
+            'image' => 'Изображение(427x550)',
             'description' => 'Описание',
         ];
     }
