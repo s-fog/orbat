@@ -57,7 +57,7 @@ abstract class Partner extends \yii\db\ActiveRecord
             'id' => 'ID',
             'name' => 'Название',
             'alias' => 'Урл',
-            'image' => 'Изображение',
+            'image' => 'Изображение(maxWidth - 380px, maxHeight - 110px)',
             'site1' => 'Сайт1',
             'site2' => 'Сайт2',
             'text' => 'Текст',
