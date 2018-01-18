@@ -79,6 +79,10 @@ public function behaviors()
         return $this->hasOne(Designer::className(), ['id' => 'designer_id']);
     }
 
+    public function getDesigner2() {
+        return $this->hasOne(Designer::className(), ['id' => 'designer2_id']);
+    }
+
     public function littleImage($image, $littleImage) {
         if (!empty($image) && !empty($littleImage)) {
             $filename = basename($littleImage);

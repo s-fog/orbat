@@ -17,7 +17,6 @@ $this->params['name'] = $model->name;
 <?=$this->render('@frontend/views/blocks/new_objects')?>
 
 <div class="video">
-    <div class="container">
         <div class="video__slider owl-carousel">
             <?php foreach($videos as $video) { ?>
                 <div class="video__sliderItem">
@@ -29,7 +28,6 @@ $this->params['name'] = $model->name;
                 </div>
             <?php } ?>
         </div>
-    </div>
 </div>
 <div class="people">
     <div class="container">

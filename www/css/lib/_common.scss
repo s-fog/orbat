@@ -183,13 +183,34 @@ table {
   }
 }
 
-.container {
+/*.container {
   @extend .block-center;
   position: relative;
   max-width: $site-width;
   width: 100%;
-
   @include respond-to(1280) {
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+}*/
+
+html, body {
+  max-width: $big-site-width;
+  min-width: 1400px;
+  width: 100%;
+  @include respond-to(350) {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+.container {
+  @extend .block-center;
+  position: relative;
+  width: $site-width;
+  @include respond-to(350) {
+    max-width: $site-width;
+    width: 100%;
     padding: 0 10px;
     box-sizing: border-box;
   }

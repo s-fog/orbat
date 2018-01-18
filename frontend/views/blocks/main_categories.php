@@ -24,7 +24,7 @@ $main_categories = Category::find()->where('id <> 4')->all();
                     <div class="mainCategories__itemInfo">
                         <div class="mainCategories__itemHeader"><?=$category->name?></div>
                         <div class="mainCategories__itemText"><?=$category->description?></div>
-                        <a href="<?=Url::to(['catalog/index', 'alias1' => $category->alias])?>" class="mainCategories__itemButton">10 проектов</a>
+                        <a href="<?=Url::to(['catalog/index', 'alias1' => $category->alias])?>" class="mainCategories__itemButton"><?=$category->productcount?> проектов</a>
                     </div>
                 </div>
             <?php } ?>

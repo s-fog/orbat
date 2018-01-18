@@ -2,7 +2,10 @@
 
 use common\models\Product;
 
-$objects = Product::find()->orderBy('id')->all();
+$objects = Product::find()
+    ->orderBy('id')
+    ->limit(9)
+    ->all();
 
 ?>
 

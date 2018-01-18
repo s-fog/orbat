@@ -60,6 +60,8 @@ use Yii;
  * @property string $plan
  * @property string $category_id
  * @property string $designer_id
+ * @property string $designer2_id
+ * @property string $support
  * @property string $seo_title
  * @property string $seo_keywords
  * @property string $seo_h1
@@ -89,7 +91,7 @@ abstract class Product extends \yii\db\ActiveRecord
             [['name', 'object', 'area', 'realization', 'type', 'block1_text', 'block1_author', 'block1_function', 'block2_text', 'block2_author', 'block2_function', 'block3_text', 'block3_author', 'block3_function', 'category_id', 'designer_id'], 'required'],
             [['area', 'realization'], 'integer'],
             [['block1_text', 'block2_text', 'block3_text', 'seo_description'], 'string'],
-            [['name', 'alias', 'object', 'type', 'image1', 'image2', 'image3', 'image4', 'image5', 'image6', 'image7', 'image8', 'image9', 'image10', 'image11', 'image_small1', 'image_small2', 'image_small3', 'image_small4', 'image_small5', 'image_small6', 'image_small7', 'image_small8', 'image_small9', 'image_small10', 'image_small11', 'slider_image1', 'slider_image2', 'slider_image3', 'slider_image4', 'slider_image5', 'slider_image_small2', 'slider_image_small4', 'slider_image_small3', 'slider_image_small1', 'slider_image_small5', 'block1_author', 'block1_function', 'block2_author', 'block2_function', 'block3_author', 'block3_function', 'plan', 'category_id', 'designer_id', 'seo_title', 'seo_keywords', 'seo_h1'], 'string', 'max' => 255]
+            [['name', 'alias', 'object', 'type', 'image1', 'image2', 'image3', 'image4', 'image5', 'image6', 'image7', 'image8', 'image9', 'image10', 'image11', 'image_small1', 'image_small2', 'image_small3', 'image_small4', 'image_small5', 'image_small6', 'image_small7', 'image_small8', 'image_small9', 'image_small10', 'image_small11', 'slider_image1', 'slider_image2', 'slider_image3', 'slider_image4', 'slider_image5', 'slider_image_small2', 'slider_image_small4', 'slider_image_small3', 'slider_image_small1', 'slider_image_small5', 'block1_author', 'block1_function', 'block2_author', 'block2_function', 'block3_author', 'block3_function', 'plan', 'category_id', 'designer_id', 'designer2_id', 'support', 'seo_title', 'seo_keywords', 'seo_h1'], 'string', 'max' => 255]
         ];
     }
 
@@ -150,6 +152,8 @@ abstract class Product extends \yii\db\ActiveRecord
             'plan' => 'План объекта(ширина и высота не более 1500px)',
             'category_id' => 'Категория',
             'designer_id' => 'Дизайнер',
+            'designer2_id' => 'Дизайнер 2',
+            'support' => 'При поддержке',
             'seo_title' => 'Seo Title',
             'seo_keywords' => 'Seo Keywords',
             'seo_h1' => 'Seo H1',

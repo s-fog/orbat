@@ -38,4 +38,9 @@ public function behaviors()
              ]
         );
     }
+
+    public function getProductcount() {
+        $products = Product::find()->where(['category_id' => $this->id])->count();
+        return $products;
+    }
 }

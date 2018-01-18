@@ -78,7 +78,7 @@ $this->params['name'] = $model->name;
                         <?php } ?>
                     </select>
                 </div>
-                <div class="filter__item" style="transform: translate(0,-5px);">
+                <div class="filter__item" style="position: relative; top: -5px;">
                     <div class="filter__itemText">Площадь объекта (м<sup>2</sup>):</div>
                     <?php
                     $areas = [
@@ -227,6 +227,17 @@ $this->params['name'] = $model->name;
                                 - <a href="<?=Url::to(['textpage/index', 'alias' => Textpage::findOne(7)->alias])?>?id=<?=$product->designer->id?>"
                                      class="product__feature link"><?=$product->designer->name?></a>
                             </li>
+                            <?php if (!empty($product->designer2_id)) { ?>
+                                <li>
+                                    - <a href="<?=Url::to(['textpage/index', 'alias' => Textpage::findOne(7)->alias])?>?id=<?=$product->designer2->id?>"
+                                         class="product__feature link"><?=$product->designer2->name?></a>
+                                </li>
+                            <?php } ?>
+                            <?php if(!empty($product->support)) { ?>
+                                <li>
+                                    - <span class="product__feature"><?=$product->support?></span>
+                                </li>
+                            <?php } ?>
                         </ul>
                         <div class="product__feature">Объект: <?=$product->object?></div>
                         <div class="product__feature">Общая площадь: <?=$product->area?> m<sup>2</sup></div>

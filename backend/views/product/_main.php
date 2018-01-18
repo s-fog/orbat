@@ -25,6 +25,14 @@ use yii\helpers\ArrayHelper;
     'options' => ['placeholder' => 'Выберите дизайнера']
 ]);?>
 
+<?=$form->field($model, 'designer2_id')->widget(Select2::classname(), [
+    'data' => ArrayHelper::map(Designer::find()->all(), 'id', 'name'),
+    'options' => ['placeholder' => 'Выберите второго дизайнера']
+]);?>
+
+    <!-- attribute area -->
+<?= $form->field($model, 'support')->textInput(['maxlength' => true]) ?>
+
     <!-- attribute object -->
 <?=$form->field($model, 'type')->widget(Select2::classname(), [
     'data' => [

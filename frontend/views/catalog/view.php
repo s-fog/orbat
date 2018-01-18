@@ -1,5 +1,6 @@
 <?php
 
+use common\models\Textpage;
 use yii\helpers\Url;
 
 $this->params['seo_title'] = $model->seo_title;
@@ -30,8 +31,16 @@ $this->params['name'] = $model->name;
                     <div class="product__name"><?=$model->name?></div>
                     <div class="product__feature">Авторы проекта:</div>
                     <ul class="product__author">
-                        <li>- <a href="#" class="product__feature link">Евгения Богатырёва</a></li>
-                        <li>- <a href="#" class="product__feature link">Павел Богатырёв</a></li>
+                        <li>
+                            - <a href="<?=Url::to(['textpage/index', 'alias' => Textpage::findOne(7)->alias])?>?id=<?=$model->designer->id?>"
+                                 class="product__feature link"><?=$model->designer->name?></a>
+                        </li>
+                        <?php if (!empty($model->designer2_id)) { ?>
+                            <li>
+                                - <a href="<?=Url::to(['textpage/index', 'alias' => Textpage::findOne(7)->alias])?>?id=<?=$model->designer2->id?>"
+                                     class="product__feature link"><?=$model->designer2->name?></a>
+                            </li>
+                        <?php } ?>
                     </ul>
                     <div class="product__feature">Объект: <?=$model->object?></div>
                     <div class="product__feature">Общая площадь: <?=$model->area?> m<sup>2</sup></div>
@@ -55,7 +64,21 @@ $this->params['name'] = $model->name;
                             <div class="product__peopleAuthor">Авторы проекта</div>
                         </div>
                     </div>
-                    <div class="product__peopleText"><?=$model->designer->product_text?></div>
+                    <?php if(empty($model->designer2_id)) { ?>
+                        <div class="product__peopleText"><?=$model->designer->product_text?></div>
+                    <?php } ?>
+                    <?php if(!empty($model->designer2_id)) { ?>
+                        <div class="product__peopleInner" style="margin-top: 20px;">
+                            <div class="product__peopleImage" style="background-image: url(<?=$model->designer2->image?>);"></div>
+                            <div class="product__peopleRight">
+                                <div class="product__peopleName"><?=$model->designer2->name?></div>
+                                <div class="product__peopleAuthor">Авторы проекта</div>
+                            </div>
+                        </div>
+                    <?php } ?>
+                    <?php if(!empty($model->support)) { ?>
+                        <div class="product__peopleText"><?=$model->support?></div>
+                    <?php } ?>
                 </div>
             </div>
             <?php

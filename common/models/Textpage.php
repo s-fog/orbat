@@ -48,6 +48,11 @@ public function behaviors()
             $active = '';
         }
 
-        return '<li'.$active.'><a href="'.Url::to(['textpage/index', 'alias' => $model->alias]).'" class="'.$class.'"><span>'.$model->name.'</span></a></li>';
+        $onclick = '';
+        if ($id == 3 || $id == 8) {
+            $onclick = ' onclick="return false;"';
+        }
+
+        return '<li'.$active.'><a href="'.Url::to(['textpage/index', 'alias' => $model->alias]).'"'.$onclick.' class="'.$class.'"><span>'.$model->name.'</span></a></li>';
     }
 }
