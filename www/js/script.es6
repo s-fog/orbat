@@ -125,7 +125,7 @@ class DesListPlitka {
     do() {
         let width = $(window).width();
 
-        if (width < 1200) {
+        if (width < 550) {
             this.nodes.list.hide();
             this.nodes.plitka.show();
             flexGridAddElements('designersPlitka__inner', 'designersPlitka__item', 'designersPlitka__item_hide');
@@ -183,7 +183,7 @@ class CatalogListPlitka {
     do() {
         let width = $(window).width();
 
-        if (width < 1400) {
+        if (width < 550) {
             this.nodes.list.hide();
             this.nodes.plitka.show();
             flexGridAddElements('designersPlitka__inner', 'designersPlitka__item', 'designersPlitka__item_hide');
@@ -288,14 +288,14 @@ class Application {
         });
 
         $(window).resize(function() {
-            if ($(window).width() > 860) {
+            /*if ($(window).width() > 860) {
                 $('.mainHeader__menus').show();
                 $('.mainHeader__contacts').show();
             } else {
                 $('.mainHeader__mobileTrigger').removeClass('active');
                 $('.mainHeader__menus').hide();
                 $('.mainHeader__contacts').hide();
-            }
+            }*/
         });
 
         if ($('#map').get(0)) {

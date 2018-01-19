@@ -24,7 +24,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 19px 0;
-    @include respond-to(1100) {
+    @include respond-to(550) {
       flex-wrap: wrap;
       justify-content: space-around;
     }
@@ -37,7 +37,7 @@ body {
     align-items: center;
     flex: 0 0 190px;
     height: 61px;
-    @include respond-to(860) {
+    @include respond-to(550) {
       flex: 0 0 100%;
       justify-content: space-around;
     }
@@ -55,7 +55,7 @@ body {
       width: 21px;
       height: 73px;
       background-image: url(../img/line.png);
-      @include respond-to(1220) {
+      @include respond-to(550) {
         display: none;
       }
     }
@@ -63,7 +63,7 @@ body {
 
   &__menus {
     display: block;
-    @include respond-to(860) {
+    @include respond-to(550) {
       display: none;
       text-align: center;
       flex: 0 0 100%;
@@ -75,7 +75,7 @@ body {
     display: flex;
     justify-content: flex-start;
     margin-bottom: 10px;
-    @include respond-to(860) {
+    @include respond-to(550) {
       display: inline-block;
       margin-top: 20px;
     }
@@ -96,7 +96,7 @@ body {
     @extend .ul-reset;
     display: flex;
     justify-content: flex-start;
-    @include respond-to(860) {
+    @include respond-to(550) {
       display: inline-block;
     }
 
@@ -119,12 +119,12 @@ body {
     position: relative;
     top: 4px;
     text-align: right;
-    @include respond-to(1100) {
+    @include respond-to(550) {
       margin-top: 20px;
       flex: 0 0 100%;
       text-align: center;
     }
-    @include respond-to(860) {
+    @include respond-to(550) {
       display: none;
     }
   }
@@ -135,7 +135,7 @@ body {
     font-size: 18px;
     color: $headerColor;
     text-decoration: none;
-    @include respond-to(1100) {
+    @include respond-to(550) {
       margin: 0;
     }
   }
@@ -167,7 +167,7 @@ body {
     position: relative;
     flex: 0 0 35px;
     height: 22px;
-    @include respond-to(860) {
+    @include respond-to(550) {
       display: block;
     }
 
@@ -219,7 +219,7 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 550px;
-    @include respond-to(800) {
+    @include respond-to(550) {
       height: auto;
       flex-wrap: wrap;
       justify-content: center;
@@ -239,7 +239,7 @@ body {
     background-repeat: no-repeat;
     box-sizing: border-box;
     transition: height 0.1s linear, box-shadow 0.1s 0.1s linear;
-    @include respond-to(800) {
+    @include respond-to(550) {
       margin-bottom: 20px;
       flex: 0 1 426px;
     }
@@ -248,7 +248,7 @@ body {
       z-index: 5;
       box-shadow: 0 0 15px 0 #000;
       height: 550px;
-      @include respond-to(800) {
+      @include respond-to(550) {
         box-shadow: 0 0 15px 0 transparent;
         height: 510px;
       }
@@ -310,11 +310,11 @@ body {
     padding-top: 85px;
     background-repeat: no-repeat;
     background-position: left top;
-    @include respond-to(1220) {
+    @include respond-to(550) {
       margin-bottom: 20px;
       flex: 0 0 48%;
     }
-    @include respond-to(650) {
+    @include respond-to(550) {
       flex: 0 0 100%;
     }
   }
@@ -425,7 +425,7 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    @include respond-to(1280) {
+    @include respond-to(550) {
       justify-content: space-around;
     }
   }
@@ -530,10 +530,10 @@ body {
     //max-width: $site-width;
     width: 100%;
     box-sizing: border-box;
-    @include respond-to(1000) {
+    @include respond-to(550) {
       padding: 0 50px;
     }
-    @include respond-to(800) {
+    @include respond-to(550) {
       padding: 0 40px;
     }
   }
@@ -546,17 +546,17 @@ body {
     height: 520px;
     box-sizing: border-box;
     overflow: hidden;
-    @include respond-to(1000) {
+    @include respond-to(550) {
       height: 500px;
     }
-    @include respond-to(900) {
+    @include respond-to(550) {
       height: 450px;
       width: 80%;
     }
-    @include respond-to(800) {
+    @include respond-to(550) {
       height: 400px;
     }
-    @include respond-to(600) {
+    @include respond-to(550) {
       height: 350px;
       width: 70%;
     }
@@ -587,16 +587,16 @@ body {
     bottom: 250px;
     width: 38px;
     height: 38px;
-    @include respond-to(1000) {
+    @include respond-to(550) {
       bottom: 225px;
     }
-    @include respond-to(900) {
+    @include respond-to(550) {
       bottom: 200px;
     }
-    @include respond-to(800) {
+    @include respond-to(550) {
       bottom: 175px;
     }
-    @include respond-to(600) {
+    @include respond-to(550) {
       bottom: 150px;
     }
     @include respond-to(400) {
@@ -829,7 +829,7 @@ body {
 
   .headerWithLine {
     width: 90%;
-    @include respond-to(900) {
+    @include respond-to(550) {
       width: 80%;
     }
     @include respond-to(500) {
@@ -921,16 +921,16 @@ body {
   &__item {
     padding: 15px 0;
     flex: 0 0 420px;
-    @include respond-to(850) {
+    @include respond-to(550) {
       flex: 0 0 50%;
     }
-    @include respond-to(680) {
+    @include respond-to(550) {
       flex: 0 0 100%;
     }
 
     &:first-child {
       border-right: 1px dashed #9e9b9a;
-      @include respond-to(850) {
+      @include respond-to(550) {
         border: none;
       }
     }
@@ -1058,7 +1058,7 @@ body {
   position: relative;
   border-top: 7px solid #333333;
   height: 540px;
-  @include respond-to(650) {
+  @include respond-to(550) {
     height: 320px;
   }
 
@@ -1066,7 +1066,7 @@ body {
     position: relative;
     z-index: 1;
     height: 100%;
-    @include respond-to(650) {
+    @include respond-to(550) {
       display: none;
     }
   }
@@ -1085,7 +1085,7 @@ body {
     background-color: rgba(0, 0, 0, 0.85);
     box-sizing: border-box;
     text-align: center;
-    @include respond-to(650) {
+    @include respond-to(550) {
       left: 0 !important;
       right: 0;
       margin: auto;
@@ -1118,7 +1118,7 @@ body {
   padding: 40px 0;
   background-image: url(../img/footerBg.png);
   background-size: cover;
-  @include respond-to(1000) {
+  @include respond-to(550) {
     display: none;
   }
   
@@ -1274,7 +1274,7 @@ body {
      font-size: 18px;
      color: $headerColor;
      text-decoration: none;
-     @include respond-to(1100) {
+     @include respond-to(550) {
        margin: 0;
      }
    }
@@ -1520,7 +1520,7 @@ body {
     margin: 50px auto 0;
     max-width: 1160px;
     width: 100%;
-    @include respond-to(1130) {
+    @include respond-to(550) {
       padding: 0 15px;
       box-sizing: border-box;
     }
@@ -1528,7 +1528,7 @@ body {
 
   &__column {
     flex: 0 0 550px;
-    @include respond-to(1130) {
+    @include respond-to(550) {
       flex: 0 0 100%;
     }
 
@@ -1687,13 +1687,13 @@ body {
     width: 975px;
     height: 520px;
     overflow: hidden;
-    @include respond-to(1200) {
+    @include respond-to(550) {
       width: 80%;
     }
-    @include respond-to(850) {
+    @include respond-to(550) {
       height: 400px;
     }
-    @include respond-to(600) {
+    @include respond-to(550) {
       height: 300px;
     }
     @include respond-to(500) {
@@ -1719,10 +1719,10 @@ body {
     top: -300px;
     width: 38px;
     height: 38px;
-    @include respond-to(850) {
+    @include respond-to(550) {
       top: -230px;
     }
-    @include respond-to(600) {
+    @include respond-to(550) {
       top: -180px;
     }
     @include respond-to(400) {
@@ -1733,7 +1733,7 @@ body {
   .owl-prev {
     left: 60px;
     background-image: url(../img/pleft.png);
-    @include respond-to(1000) {
+    @include respond-to(550) {
       left: 5px;
     }
   }
@@ -1741,7 +1741,7 @@ body {
   .owl-next {
     right: 60px;
     background-image: url(../img/pright.png);
-    @include respond-to(1000) {
+    @include respond-to(550) {
       right: 5px;
     }
   }
@@ -1897,7 +1897,7 @@ body {
   align-items: center;
   margin-top: 5px;
   width: 220px;
-  @include respond-to(1200) {
+  @include respond-to(550) {
     display: none;
   }
 
@@ -2255,7 +2255,7 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    @include respond-to(1290) {
+    @include respond-to(550) {
       justify-content: space-around;
     }
   }
@@ -2425,7 +2425,7 @@ body {
   flex-wrap: wrap;
   margin-bottom: 60px;
   padding: 0 30px;
-  @include respond-to(1280) {
+  @include respond-to(550) {
     justify-content: space-around;
     margin-bottom: 30px;
     padding: 0;
@@ -2474,7 +2474,7 @@ body {
 .catalog {
 
   .changeView {
-    @include respond-to(1400) {
+    @include respond-to(550) {
       display: none;
     }
   }
@@ -2487,7 +2487,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @include respond-to(920) {
+    @include respond-to(550) {
       justify-content: space-around;
       flex-wrap: wrap;
     }
@@ -2573,7 +2573,7 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    @include respond-to(1200) {
+    @include respond-to(550) {
       justify-content: space-around;
     }
   }
@@ -2581,7 +2581,7 @@ body {
   &__item {
     flex: 0 0 230px;
     padding: 15px 0;
-    @include respond-to(1200) {
+    @include respond-to(550) {
       margin: 0 10px;
     }
 
@@ -2716,7 +2716,7 @@ body {
 
 .catalogList {
   overflow: hidden;
-  @include respond-to(1400) {
+  @include respond-to(550) {
     display: none;
   }
 
@@ -2736,7 +2736,13 @@ body {
       }
 
       .owl-nav {
-        transform: translate(980px, 0);
+        right: -160px;
+      }
+
+      &>.container {
+        @include respond-to(1400) {
+          //right: 120px;
+        }
       }
     }
 
@@ -2752,12 +2758,19 @@ body {
       }
 
       .owl-nav {
-        transform: translate(-250px, 0);
+        left: -200px;
+      }
+
+      &>.container {
+        @include respond-to(1400) {
+          left: 120px;
+        }
       }
     }
   }
 
   .container {
+    position: static;
     max-width: 950px;
   }
 
@@ -2787,7 +2800,7 @@ body {
 
     &_odd {
       top: 70px;
-      right: -300px;
+      right: 0;
 
       &:before {
         left: -15px;
@@ -2797,7 +2810,7 @@ body {
 
     &_even {
       top: 70px;
-      left: -300px;
+      left: 0;
 
       &:before {
         right: -15px;
@@ -2809,7 +2822,7 @@ body {
   &__infoInner {
     position: relative;
     z-index: 10;
-    width: 428px;
+    width: 378px;
     padding: 20px;
     background: url(../img/prbg.png) no-repeat center center;
     background-size: cover;
