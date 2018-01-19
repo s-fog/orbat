@@ -186,6 +186,9 @@ table {
 html {
   min-width: 1200px;
   width: 100%;
+  @include respond-to(550) {
+    min-width: 0;
+  }
 }
 /*.container {
   @extend .block-center;
@@ -207,6 +210,9 @@ html {
   @include respond-to(1280) {
     padding: 0 10px;
     box-sizing: border-box;
+  }
+  @include respond-to(550) {
+    min-width: 0;
   }
 }
 
