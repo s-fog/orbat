@@ -184,7 +184,7 @@ table {
 }
 
 html {
-  min-width: 1200px;
+  min-width: 1300px;
   width: 100%;
   @include respond-to(550) {
     min-width: 0;
@@ -197,10 +197,8 @@ html {
   max-width: $site-width;
   min-width: 1300px;
   width: 100%;
-  @include respond-to(1280) {
-    padding: 0 10px;
-    box-sizing: border-box;
-  }
+  padding: 0 10px;
+  box-sizing: border-box;
   @include respond-to(550) {
     min-width: 0;
   }

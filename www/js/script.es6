@@ -331,6 +331,8 @@ class Application {
                 let parent = $(this).parents('.catalogList__slider');
                 let info = parent.siblings('.catalogList__info');
 
+                $(this).addClass('hover');
+
                 if (info.hasClass('catalogList__info_odd')) {
                     info.css({'transform': 'translate(150px, 0)'});
                 }
@@ -342,6 +344,8 @@ class Application {
             function() {
                 let parent = $(this).parents('.catalogList__slider');
                 let info = parent.siblings('.catalogList__info');
+
+                $(this).removeClass('hover');
 
                 info.css({'transform': 'translate(0, 0)'});
             }

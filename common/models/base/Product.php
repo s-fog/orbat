@@ -27,6 +27,11 @@ use Yii;
  * @property string $image9
  * @property string $image10
  * @property string $image11
+ * @property string $image12
+ * @property string $image13
+ * @property string $image14
+ * @property string $image15
+ * @property string $image16
  * @property string $image_small1
  * @property string $image_small2
  * @property string $image_small3
@@ -38,6 +43,11 @@ use Yii;
  * @property string $image_small9
  * @property string $image_small10
  * @property string $image_small11
+ * @property string $image_small12
+ * @property string $image_small13
+ * @property string $image_small14
+ * @property string $image_small15
+ * @property string $image_small16
  * @property string $slider_image1
  * @property string $slider_image2
  * @property string $slider_image3
@@ -91,7 +101,7 @@ abstract class Product extends \yii\db\ActiveRecord
             [['name', 'object', 'area', 'realization', 'type', 'block1_text', 'block1_author', 'block1_function', 'block2_text', 'block2_author', 'block2_function', 'block3_text', 'block3_author', 'block3_function', 'category_id', 'designer_id'], 'required'],
             [['area', 'realization'], 'integer'],
             [['block1_text', 'block2_text', 'block3_text', 'seo_description'], 'string'],
-            [['name', 'alias', 'object', 'type', 'image1', 'image2', 'image3', 'image4', 'image5', 'image6', 'image7', 'image8', 'image9', 'image10', 'image11', 'image_small1', 'image_small2', 'image_small3', 'image_small4', 'image_small5', 'image_small6', 'image_small7', 'image_small8', 'image_small9', 'image_small10', 'image_small11', 'slider_image1', 'slider_image2', 'slider_image3', 'slider_image4', 'slider_image5', 'slider_image_small2', 'slider_image_small4', 'slider_image_small3', 'slider_image_small1', 'slider_image_small5', 'block1_author', 'block1_function', 'block2_author', 'block2_function', 'block3_author', 'block3_function', 'plan', 'category_id', 'designer_id', 'designer2_id', 'support', 'seo_title', 'seo_keywords', 'seo_h1'], 'string', 'max' => 255]
+            [['name', 'alias', 'object', 'type', 'image1', 'image2', 'image3', 'image4', 'image5', 'image6', 'image7', 'image8', 'image9', 'image10', 'image11', 'image12', 'image13', 'image14', 'image15', 'image16', 'image_small1', 'image_small2', 'image_small3', 'image_small4', 'image_small5', 'image_small6', 'image_small7', 'image_small8', 'image_small9', 'image_small10', 'image_small11', 'image_small12', 'image_small13', 'image_small14', 'image_small15', 'image_small16', 'slider_image1', 'slider_image2', 'slider_image3', 'slider_image4', 'slider_image5', 'slider_image_small2', 'slider_image_small4', 'slider_image_small3', 'slider_image_small1', 'slider_image_small5', 'block1_author', 'block1_function', 'block2_author', 'block2_function', 'block3_author', 'block3_function', 'plan', 'category_id', 'designer_id', 'designer2_id', 'support', 'seo_title', 'seo_keywords', 'seo_h1'], 'string', 'max' => 255]
         ];
     }
 
@@ -119,6 +129,11 @@ abstract class Product extends \yii\db\ActiveRecord
             'image9' => 'Изображение9(ширина и высота не более 1500px)',
             'image10' => 'Изображение10(ширина и высота не более 1500px)',
             'image11' => 'Изображение11(ширина и высота не более 1500px)',
+            'image12' => 'Изображение12(ширина и высота не более 1500px)',
+            'image13' => 'Изображение13(ширина и высота не более 1500px)',
+            'image14' => 'Изображение14(ширина и высота не более 1500px)',
+            'image15' => 'Изображение15(ширина и высота не более 1500px)',
+            'image16' => 'Изображение16(ширина и высота не более 1500px)',
             'image_small1' => 'Изображение миниатюра1(426x426)',
             'image_small2' => 'Изображение миниатюра2(426x426)',
             'image_small3' => 'Изображение миниатюра3(426x426)',
@@ -130,6 +145,11 @@ abstract class Product extends \yii\db\ActiveRecord
             'image_small9' => 'Изображение миниатюра9(426x426)',
             'image_small10' => 'Изображение миниатюра10(426x426)',
             'image_small11' => 'Изображение миниатюра11(426x426)',
+            'image_small12' => 'Изображение миниатюра12(426x426)',
+            'image_small13' => 'Изображение миниатюра13(426x426)',
+            'image_small14' => 'Изображение миниатюра14(426x426)',
+            'image_small15' => 'Изображение миниатюра15(426x426)',
+            'image_small16' => 'Изображение миниатюра16(426x426)',
             'slider_image1' => 'Слайд1(ширина и высота не более 1500px)',
             'slider_image2' => 'Слайд2(ширина и высота не более 1500px)',
             'slider_image3' => 'Слайд3(ширина и высота не более 1500px)',

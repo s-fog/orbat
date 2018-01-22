@@ -147,6 +147,11 @@ $this->params['name'] = $model->name;
             <?=$model->littleImage($model->image9, $model->image_small9)?>
             <?=$model->littleImage($model->image10, $model->image_small10)?>
             <?=$model->littleImage($model->image11, $model->image_small11)?>
+            <?=$model->littleImage($model->image12, $model->image_small12)?>
+            <?=$model->littleImage($model->image13, $model->image_small13)?>
+            <?=$model->littleImage($model->image14, $model->image_small14)?>
+            <?=$model->littleImage($model->image15, $model->image_small15)?>
+            <?=$model->littleImage($model->image16, $model->image_small16)?>
         </div>
     </div>
 </div>

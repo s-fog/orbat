@@ -23,6 +23,11 @@ class Product extends BaseProduct
     public $image9_file;
     public $image10_file;
     public $image11_file;
+    public $image12_file;
+    public $image13_file;
+    public $image14_file;
+    public $image15_file;
+    public $image16_file;
     public $image_small1_file;
     public $image_small2_file;
     public $image_small3_file;
@@ -34,6 +39,11 @@ class Product extends BaseProduct
     public $image_small9_file;
     public $image_small10_file;
     public $image_small11_file;
+    public $image_small12_file;
+    public $image_small13_file;
+    public $image_small14_file;
+    public $image_small15_file;
+    public $image_small16_file;
     public $slider_image1_file;
     public $slider_image2_file;
     public $slider_image3_file;

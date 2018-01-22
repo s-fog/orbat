@@ -2738,13 +2738,20 @@ body {
         top: 200px;
       }
 
+      .catalogList__sliderItem {
+        &:before {
+          left: 15px;
+          top: 15px;
+        }
+      }
+
       .owl-nav {
         right: -160px;
       }
 
       &>.container {
         @include respond-to(1400) {
-          //right: 120px;
+          right: 120px;
         }
       }
     }
@@ -2760,6 +2767,13 @@ body {
         top: 200px;
       }
 
+      .catalogList__sliderItem {
+        &:before {
+          right: 15px;
+          top: 15px;
+        }
+      }
+
       .owl-nav {
         left: -200px;
       }
@@ -2773,12 +2787,8 @@ body {
   }
 
   .container {
-    position: static;
     max-width: 950px;
     min-width: 950px;
-    @include respond-to(950) {
-
-    }
   }
 
   &__slider {
@@ -2786,8 +2796,27 @@ body {
   }
 
   &__sliderItem {
+    position: relative;
     height: 540px;
     background-size: cover;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 44px;
+      height: 44px;
+      background-image: url(../img/oo.png);
+      opacity: 0;
+      @extend .transition;
+    }
+
+    &.hover {
+      &:before {
+        opacity: 1;
+      }
+    }
   }
 
   &__info {
@@ -2807,7 +2836,7 @@ body {
 
     &_odd {
       top: 70px;
-      right: 0;
+      right: -200px;
 
       &:before {
         left: -15px;
@@ -2817,7 +2846,7 @@ body {
 
     &_even {
       top: 70px;
-      left: 0;
+      left: -200px;
 
       &:before {
         right: -15px;

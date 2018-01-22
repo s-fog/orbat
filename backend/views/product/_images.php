@@ -159,3 +159,68 @@
     'image' => $model->image11,
     'name' => 'image11'
 ])?>
+    <hr style="height: 1px;background-color: #000;">
+<?=$this->render('@backend/views/blocks/image', [
+    'form' => $form,
+    'model' => $model,
+    'image' => $model->image_small12,
+    'name' => 'image_small12'
+])?>
+<?=$this->render('@backend/views/blocks/image', [
+    'form' => $form,
+    'model' => $model,
+    'image' => $model->image12,
+    'name' => 'image12'
+])?>
+    <hr style="height: 1px;background-color: #000;">
+<?=$this->render('@backend/views/blocks/image', [
+    'form' => $form,
+    'model' => $model,
+    'image' => $model->image_small13,
+    'name' => 'image_small13'
+])?>
+<?=$this->render('@backend/views/blocks/image', [
+    'form' => $form,
+    'model' => $model,
+    'image' => $model->image13,
+    'name' => 'image13'
+])?>
+    <hr style="height: 1px;background-color: #000;">
+<?=$this->render('@backend/views/blocks/image', [
+    'form' => $form,
+    'model' => $model,
+    'image' => $model->image_small14,
+    'name' => 'image_small14'
+])?>
+<?=$this->render('@backend/views/blocks/image', [
+    'form' => $form,
+    'model' => $model,
+    'image' => $model->image14,
+    'name' => 'image14'
+])?>
+    <hr style="height: 1px;background-color: #000;">
+<?=$this->render('@backend/views/blocks/image', [
+    'form' => $form,
+    'model' => $model,
+    'image' => $model->image_small15,
+    'name' => 'image_small15'
+])?>
+<?=$this->render('@backend/views/blocks/image', [
+    'form' => $form,
+    'model' => $model,
+    'image' => $model->image15,
+    'name' => 'image15'
+])?>
+    <hr style="height: 1px;background-color: #000;">
+<?=$this->render('@backend/views/blocks/image', [
+    'form' => $form,
+    'model' => $model,
+    'image' => $model->image_small16,
+    'name' => 'image_small16'
+])?>
+<?=$this->render('@backend/views/blocks/image', [
+    'form' => $form,
+    'model' => $model,
+    'image' => $model->image16,
+    'name' => 'image16'
+])?>
