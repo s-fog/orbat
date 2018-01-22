@@ -79,7 +79,7 @@ $form = ActiveForm::begin([
             'template' => "{input}<span>Отправляя свои данные, я принимаю Пользовательское соглашение.</span>{error}"
         ])->checkbox(['checked' => false, 'label' => false]);?>
     </label>
-    <a href="/00_doc.pdf" target="_blank" class="link" style="position: relative;top: 5px;">Подробнее</a>
+    <a href="/00_doc.pdf" target="_blank" class="link" style="position: relative;top: 5px;font-size: 14px;">Подробнее</a>
 </div>
 <?php ActiveForm::end();?>
 

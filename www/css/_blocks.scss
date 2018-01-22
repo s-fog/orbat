@@ -516,6 +516,9 @@ body {
     @include respond-to(500) {
       font-size: 24px;
     }
+    @include respond-to(400) {
+      font-size: 28px;
+    }
   }
 
   &__text {
@@ -2772,6 +2775,10 @@ body {
   .container {
     position: static;
     max-width: 950px;
+    min-width: 950px;
+    @include respond-to(950) {
+
+    }
   }
 
   &__slider {
