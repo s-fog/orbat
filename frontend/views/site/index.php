@@ -45,7 +45,7 @@ $this->params['name'] = $model->name;
                    style="background-image: url(/images/thumbs/<?=$filename[0]?>-284-284.<?=$filename[1]?>);"></a>
                 <div class="people__sliderItemInfo">
                     <div class="people__sliderItemHeader"><?=$designer->name?></div>
-                    <div class="people__sliderItemText"><?=$designer->product_text?></div>
+                    <div class="people__sliderItemText"><?=$designer->text?></div>
                     <a href="<?=$url?>" class="people__sliderItemButton">Подробнее</a>
                 </div>
             </div>
