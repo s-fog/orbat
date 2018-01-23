@@ -1984,7 +1984,6 @@ body {
   &__top {
     position: relative;
     z-index: 5;
-    padding-left: 100px;
     .container {
       max-width: 1180px;
     }
@@ -1994,6 +1993,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: 100px;
   }
 
   &__image {

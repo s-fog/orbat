@@ -445,8 +445,12 @@ class Application {
                         },
                         {}
                     );
-                let offset = $('.designersList__item[data-id="'+params["id"]+'"]').offset();
-                $("html, body").animate({ scrollTop: offset.top - 40 }, 100);
+                let designer = $('.designersList__item[data-id="'+params["id"]+'"]');
+                
+                if (designer.get(0)) {
+                    let offset = designer.offset();
+                    $("html, body").animate({ scrollTop: offset.top - 40 }, 100);
+                }
             }
         }
     }
