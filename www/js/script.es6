@@ -458,7 +458,7 @@ class Application {
             loop: true
         });
 
-        $(".product__itemImage").fancybox({
+        $('[data-fancybox="productImages"]').fancybox({
             loop: true
         });
     }
