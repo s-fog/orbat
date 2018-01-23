@@ -453,6 +453,10 @@ class Application {
                 }
             }
         }
+        
+        $(".catalogList__sliderItem").fancybox({
+            loop: true
+        });
     }
 
     _initClasses() {
