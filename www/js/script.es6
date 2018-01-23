@@ -453,8 +453,12 @@ class Application {
                 }
             }
         }
-        
+
         $(".catalogList__sliderItem").fancybox({
+            loop: true
+        });
+
+        $(".product__itemImage").fancybox({
             loop: true
         });
     }
