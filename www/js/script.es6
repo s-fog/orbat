@@ -93,7 +93,7 @@ class DesListPlitka {
 
     _bindEvents() {
         if (this.nodes.list.get(0) && this.nodes.plitka.get(0)) {
-            $(document).resize((event) => {
+            $(window).resize((event) => {
                 this.do();
             });
         }
@@ -123,7 +123,7 @@ class DesListPlitka {
     }
 
     do() {
-        let width = $(window).width();
+        let width = $(document).width();
 
         if (width < 550) {
             this.nodes.list.hide();
@@ -181,7 +181,7 @@ class CatalogListPlitka {
     }
 
     do() {
-        let width = $(window).width();
+        let width = $(document).width();
 
         if (width < 550) {
             this.nodes.list.hide();
