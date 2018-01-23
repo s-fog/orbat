@@ -98,7 +98,7 @@ abstract class Product extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'object', 'area', 'realization', 'type', 'block1_text', 'block1_author', 'block1_function', 'block2_text', 'block2_author', 'block2_function', 'block3_text', 'block3_author', 'block3_function', 'category_id', 'designer_id'], 'required'],
+            [['name', 'object', 'area', 'realization', 'type', 'block1_text', 'block2_text', 'block3_text', 'category_id', 'designer_id'], 'required'],
             [['area', 'realization'], 'integer'],
             [['block1_text', 'block2_text', 'block3_text', 'seo_description'], 'string'],
             [['name', 'alias', 'object', 'type', 'image1', 'image2', 'image3', 'image4', 'image5', 'image6', 'image7', 'image8', 'image9', 'image10', 'image11', 'image12', 'image13', 'image14', 'image15', 'image16', 'image_small1', 'image_small2', 'image_small3', 'image_small4', 'image_small5', 'image_small6', 'image_small7', 'image_small8', 'image_small9', 'image_small10', 'image_small11', 'image_small12', 'image_small13', 'image_small14', 'image_small15', 'image_small16', 'slider_image1', 'slider_image2', 'slider_image3', 'slider_image4', 'slider_image5', 'slider_image_small2', 'slider_image_small4', 'slider_image_small3', 'slider_image_small1', 'slider_image_small5', 'block1_author', 'block1_function', 'block2_author', 'block2_function', 'block3_author', 'block3_function', 'plan', 'category_id', 'designer_id', 'designer2_id', 'support', 'seo_title', 'seo_keywords', 'seo_h1'], 'string', 'max' => 255]
