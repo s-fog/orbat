@@ -92,11 +92,11 @@ class DesListPlitka {
     }
 
     _bindEvents() {
-        if (this.nodes.list.get(0) && this.nodes.plitka.get(0)) {
+        /*if (this.nodes.list.get(0) && this.nodes.plitka.get(0)) {
             $(window).resize((event) => {
                 this.do();
             });
-        }
+        }*/
 
         $('.changeView [name="view"]').click((event) => {
             let value = $(event.currentTarget).val();
@@ -154,11 +154,11 @@ class CatalogListPlitka {
     }
 
     _bindEvents() {
-        if (this.nodes.list.get(0) && this.nodes.plitka.get(0)) {
+        /*if (this.nodes.list.get(0) && this.nodes.plitka.get(0)) {
             $(window).resize((event) => {
                 this.do();
             });
-        }
+        }*/
 
         $('.changeView [name="view"]').click((event) => {
             let value = $(event.currentTarget).val();
