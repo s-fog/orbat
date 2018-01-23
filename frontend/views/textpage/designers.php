@@ -36,7 +36,7 @@ $this->params['name'] = $model->name;
         $filename = basename($designer->image);
         $filename = explode('.', $filename);
         ?>
-        <div class="designersList__item">
+        <div class="designersList__item" data-id="<?=$designer->id?>">
             <div class="designersList__top">
                 <div class="container">
                     <div class="designersList__topInner">

@@ -20,13 +20,13 @@ $main_categories = Category::find()->where('id <> 4')->all();
                     $active = ' active';
                 }
                 ?>
-                <div class="mainCategories__item<?=$active?>" style="background-image: url(/images/thumbs/<?=$filename[0]?>-427-550.<?=$filename[1]?>);">
-                    <div class="mainCategories__itemInfo">
-                        <div class="mainCategories__itemHeader"><?=$category->name?></div>
-                        <div class="mainCategories__itemText"><?=$category->description?></div>
-                        <a href="<?=Url::to(['catalog/index', 'alias1' => $category->alias])?>" class="mainCategories__itemButton"><?=$category->productcount?> проектов</a>
-                    </div>
-                </div>
+                <a href="<?=Url::to(['catalog/index', 'alias1' => $category->alias])?>" class="mainCategories__item<?=$active?>" style="background-image: url(/images/thumbs/<?=$filename[0]?>-427-550.<?=$filename[1]?>);">
+                    <span class="mainCategories__itemInfo">
+                        <span class="mainCategories__itemHeader"><?=$category->name?></span>
+                        <span class="mainCategories__itemText"><?=$category->description?></span>
+                        <span class="mainCategories__itemButton"><?=$category->productcount?> проектов</span>
+                    </span>
+                </a>
             <?php } ?>
         </div>
     </div>

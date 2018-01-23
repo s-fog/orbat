@@ -20,8 +20,10 @@ $this->params['name'] = $model->name;
         <div class="container">
             <div class="catalog__topInner">
                 <ul class="catalog__categories">
-                    <?php foreach(Category::find()->where('id <> 4')->all() as $category) {
-                        if ($_SERVER['REQUEST_URI'] == '/catalog/'.$category->alias.Yii::$app->get('urlManager')->suffix) {
+                    <?php
+                    foreach(Category::find()->where('id <> 4')->all() as $category) {
+                        $uri = explode('?', $_SERVER['REQUEST_URI']);
+                        if ($uri[0] == '/catalog/'.$category->alias.Yii::$app->get('urlManager')->suffix) {
                             $active = ' class="active"';
                         } else {
                             $active = '';

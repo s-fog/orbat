@@ -205,7 +205,6 @@ class Application {
         flexGridAddElements('reviews__inner', 'reviews__item', 'reviews__item_hide');
         flexGridAddElements('partnersPage__inner', 'partnersPage__item', 'partnersPage__item_hide');
         flexGridAddElements('partnersPage__inner', 'partnersPage__item', 'partnersPage__item_hide');
-        flexGridAddElements('lphotos', 'lphotos__item', 'lphotos__item_hide');
         flexGridAddElements('catalogPlitka__inner', 'catalogPlitka__item', 'catalogPlitka__item_hide');
         flexGridAddElements('designersList__bottomInner', 'designersList__bottomItem', 'designersList__bottomItem_hide');
 
@@ -215,6 +214,27 @@ class Application {
             navText: false,
             center: true,
             loop: true
+        });
+
+        $('.lphotos_slider').owlCarousel({
+            items: 7,
+            nav: true,
+            dots: false,
+            navText: false,
+            center: false,
+            loop: false,
+            responsiveClass:true,
+            responsive:{
+                0:{
+                    items:2
+                },
+                500:{
+                    items:3
+                },
+                550:{
+                    items:7
+                }
+            }
         });
 
         $('.people__slider').owlCarousel({
@@ -272,7 +292,7 @@ class Application {
             nav: true,
             navText: false,
             dots: true,
-            loop: false
+            loop: true
         });
 
         $('.mainHeader__mobileTrigger').click(function() {
@@ -409,6 +429,26 @@ class Application {
                 $('.mainCategories__item').eq(1).addClass('active');
             }
         );
+
+        if ($('.designersList').get(0)) {
+            if (location.search.indexOf('id')) {
+                let params = window
+                    .location
+                    .search
+                    .replace('?','')
+                    .split('&')
+                    .reduce(
+                        function(p,e){
+                            var a = e.split('=');
+                            p[ decodeURIComponent(a[0])] = decodeURIComponent(a[1]);
+                            return p;
+                        },
+                        {}
+                    );
+                let offset = $('.designersList__item[data-id="'+params["id"]+'"]').offset();
+                $("html, body").animate({ scrollTop: offset.top - 40 }, 100);
+            }
+        }
     }
 
     _initClasses() {

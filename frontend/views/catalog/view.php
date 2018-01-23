@@ -53,7 +53,9 @@ $this->params['name'] = $model->name;
             $filename = explode('.', $filename);
             ?>
             <div class="product__item">
-                <div data-fancybox="productImages" data-src="<?=$model->image1?>" class="product__itemImage" style="background-image: url(/images/thumbs/<?=$filename[0]?>-426-426.<?=$filename[1]?>);"></div>
+                <div data-fancybox="productImages" data-src="<?=$model->image1?>" class="product__itemImage" style="background-image: url(/images/thumbs/<?=$filename[0]?>-426-426.<?=$filename[1]?>);">
+                    <div class="product__itemImageInner"></div>
+                </div>
             </div>
             <div class="product__item">
                 <div class="product__itemInner">
@@ -86,7 +88,9 @@ $this->params['name'] = $model->name;
             $filename = explode('.', $filename);
             ?>
             <div class="product__item">
-                <div data-fancybox="productImages" data-src="<?=$model->image2?>" class="product__itemImage" style="background-image: url(/images/thumbs/<?=$filename[0]?>-426-426.<?=$filename[1]?>);"></div>
+                <div data-fancybox="productImages" data-src="<?=$model->image2?>" class="product__itemImage" style="background-image: url(/images/thumbs/<?=$filename[0]?>-426-426.<?=$filename[1]?>);">
+                    <div class="product__itemImageInner"></div>
+                </div>
             </div>
             <div class="product__item">
                 <div class="product__itemInner">
@@ -104,7 +108,9 @@ $this->params['name'] = $model->name;
             $filename = explode('.', $filename);
             ?>
             <div class="product__item">
-                <div data-fancybox="productImages" data-src="<?=$model->image3?>" class="product__itemImage" style="background-image: url(/images/thumbs/<?=$filename[0]?>-426-426.<?=$filename[1]?>);"></div>
+                <div data-fancybox="productImages" data-src="<?=$model->image3?>" class="product__itemImage" style="background-image: url(/images/thumbs/<?=$filename[0]?>-426-426.<?=$filename[1]?>);">
+                    <div class="product__itemImageInner"></div>
+                </div>
             </div>
 
             <div class="product__item">
@@ -123,7 +129,9 @@ $this->params['name'] = $model->name;
             $filename = explode('.', $filename);
             ?>
             <div class="product__item">
-                <div data-fancybox="productImages" data-src="<?=$model->image4?>" class="product__itemImage" style="background-image: url(/images/thumbs/<?=$filename[0]?>-426-426.<?=$filename[1]?>);"></div>
+                <div data-fancybox="productImages" data-src="<?=$model->image4?>" class="product__itemImage" style="background-image: url(/images/thumbs/<?=$filename[0]?>-426-426.<?=$filename[1]?>);">
+                    <div class="product__itemImageInner"></div>
+                </div>
             </div>
 
             <div class="product__item">
@@ -138,8 +146,8 @@ $this->params['name'] = $model->name;
                 </div>
             </div>
         </div>
-        <div class="headerWithLine headerWithLine_small"><span>Другие фотографии проекта</span></div>
-        <div class="lphotos">
+        <div class="headerWithLine headerWithLine_small<?=(!empty($model->image12)) ? ' lphotos_sliderHeaderWithLine' : ''?>"><span>Другие фотографии проекта</span></div>
+        <div class="lphotos<?=(empty($model->image11)) ? ' lphotos_center' : ''?><?=(!empty($model->image12)) ? ' lphotos_slider owl-carousel' : ''?>">
             <?=$model->littleImage($model->image5, $model->image_small5)?>
             <?=$model->littleImage($model->image6, $model->image_small6)?>
             <?=$model->littleImage($model->image7, $model->image_small7)?>
