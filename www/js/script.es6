@@ -93,7 +93,7 @@ class DesListPlitka {
 
     _bindEvents() {
         if (this.nodes.list.get(0) && this.nodes.plitka.get(0)) {
-            $(window).resize((event) => {
+            $(document).resize((event) => {
                 this.do();
             });
         }
@@ -292,7 +292,7 @@ class Application {
             nav: true,
             navText: false,
             dots: true,
-            loop: true
+            loop: false
         });
 
         $('.mainHeader__mobileTrigger').click(function() {

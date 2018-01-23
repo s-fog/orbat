@@ -1492,6 +1492,12 @@ body {
     @extend .black;
     font-size: 24px;
   }
+
+  .changeView {
+    position: absolute;
+    right: 15px;
+    top: 0;
+  }
 }
 
 .company {
@@ -2829,7 +2835,7 @@ body {
       }
 
       .owl-nav {
-        right: -160px;
+        right: -200px;
       }
 
       &>.container {
@@ -2880,7 +2886,7 @@ body {
 
   &__sliderItem {
     position: relative;
-    height: 540px;
+    height: 600px;
     background-size: cover;
     cursor: pointer;
 
