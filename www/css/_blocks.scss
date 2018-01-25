@@ -431,6 +431,9 @@ body {
 }
 
 .catalogBrick {
+  @include respond-to(550) {
+    display: block !important;
+  }
 
   &__inner {
     display: flex;
@@ -2435,6 +2438,7 @@ body {
 
   &__peopleRight {
     margin-left: 20px;
+    flex: 1 1 100%;
   }
 
   &__peopleName {
