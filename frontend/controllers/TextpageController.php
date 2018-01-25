@@ -68,7 +68,7 @@ class TextpageController extends Controller
                 case 6: $view = 'contacts';break;
                 case 7: {
                     $this->layout = 'main';
-                    $designers = Designer::find()->all();
+                    $designers = Designer::find()->where(['show_on_page' => 1])->all();
                     return $this->render('designers', [
                         'model' => $model,
                         'designers' => $designers

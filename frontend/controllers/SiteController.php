@@ -69,7 +69,7 @@ class SiteController extends Controller
     public function actionIndex()
     {
         $model = Mainpage::findOne(1);
-        $designers = Designer::find()->all();
+        $designers = Designer::find()->where(['show_on_page' => 1])->all();
         $partners = Partner::find()->all();
         $videos = Video::find()->all();
         return $this->render('index', [
