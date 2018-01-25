@@ -66,9 +66,9 @@ $this->params['name'] = $model->name;
                             <div class="product__peopleAuthor">Авторы проекта</div>
                         </div>
                     </div>
-                    <?php if(empty($model->designer2_id)) { ?>
+                    <?php if(empty($model->designer2_id)) {/* ?>
                         <div class="product__peopleText"><?=$model->designer->product_text?></div>
-                    <?php } ?>
+                    <?php */} ?>
                     <?php if(!empty($model->designer2_id)) { ?>
                         <div class="product__peopleInner" style="margin-top: 20px;">
                             <div class="product__peopleImage" style="background-image: url(<?=$model->designer2->image?>);"></div>

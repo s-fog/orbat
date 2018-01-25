@@ -25,6 +25,7 @@ use Yii;
  * @property string $seo_keywords
  * @property string $seo_h1
  * @property string $seo_description
+ * @property integer $show_on_page
  * @property string $aliasModel
  */
 abstract class Designer extends \yii\db\ActiveRecord
@@ -47,8 +48,9 @@ abstract class Designer extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'product_text', 'text', 'studio'], 'required'],
+            [['name', 'text', 'studio', 'address', 'phone1', 'phone2', 'email', 'site'], 'required'],
             [['product_text', 'text', 'seo_description'], 'string'],
+            [['show_on_page'], 'integer'],
             [['name', 'alias', 'image', 'studio', 'address', 'phone1', 'phone2', 'email', 'site', 'seo_title', 'seo_keywords', 'seo_h1'], 'string', 'max' => 255]
         ];
     }
@@ -75,6 +77,7 @@ abstract class Designer extends \yii\db\ActiveRecord
             'seo_keywords' => 'Seo Keywords',
             'seo_h1' => 'Seo H1',
             'seo_description' => 'Seo Description',
+            'show_on_page' => 'Показывать на странице?',
         ];
     }
 

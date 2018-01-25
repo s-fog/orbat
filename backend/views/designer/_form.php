@@ -1,5 +1,6 @@
 <?php
 
+use kartik\checkbox\CheckboxX;
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use \dmstr\bootstrap\Tabs;
@@ -32,6 +33,12 @@ use yii\helpers\StringHelper;
 
 <!-- attribute name -->
 			<?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
+
+            <?= $form->field($model, 'show_on_page')->widget(CheckboxX::classname(), [
+                'pluginOptions' => [
+                    'threeState'=>false
+                ]
+            ])?>
 
             <?=$this->render('@backend/views/blocks/image', [
                 'form' => $form,
