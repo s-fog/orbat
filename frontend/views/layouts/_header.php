@@ -3,7 +3,7 @@
 use common\models\Textpage;
 
 ?>
-
+<div class="bgbg">
 <div class="mainHeader">
     <div class="container">
         <div class="mainHeader__inner">

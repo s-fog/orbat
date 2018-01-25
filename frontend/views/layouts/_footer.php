@@ -138,3 +138,4 @@ $form = ActiveForm::begin([
     <div class="success__header">Спасибо за обращение<br>в компанию ОРБАТ!</div>
     <div class="success__text">Наши менеджеры свяжутся с вами в самое ближайшее время.</div>
 </div>
+</div>

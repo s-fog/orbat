@@ -40,6 +40,11 @@ public function behaviors()
     }
 
     public function getProducts() {
-        return $this->hasMany(Product::className(), ['designer_id' => 'id']);
+        $products = Product::find()
+            ->where(['designer_id' => $this->id])
+            ->orWhere(['designer2_id' => $this->id])
+            ->all();
+
+        return $products;
     }
 }

@@ -72,20 +72,8 @@ $this->params['name'] = $model->name;
                 <div class="container">
                     <div class="designersList__bottomInner">
                         <?php foreach($designer->products as $product) {
-                            $filename = basename($product->image_small1);
-                            $filename = explode('.', $filename);
-                            ?>
-                            <a href="<?=Url::to(['catalog/view', 'alias1' => $product->category->alias, 'alias2' => $product->alias])?>"
-                               class="designersList__bottomItem"
-                               style="background-image: url(/images/thumbs/<?=$filename[0]?>-426-426.<?=$filename[1]?>);">
-                                <span class="designersList__bottomItemInner">
-                                    <span class="designersList__bottomItemHeader"><?=$product->name?></span>
-                                    <span class="designersList__bottomItemText">Объект: <?=$product->object?></span>
-                                    <span class="designersList__bottomItemText">Общая площадь: <?=$product->area?> m<sup>2</sup></span>
-                                    <span class="designersList__bottomItemText">Реализация: <?=$product->realization?></span>
-                                </span>
-                            </a>
-                        <?php } ?>
+                            echo $this->render('@frontend/views/catalog/item_brick', ['model' => $product]);
+                        } ?>
                     </div>
                 </div>
             </div>

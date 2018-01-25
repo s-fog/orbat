@@ -10,6 +10,13 @@ html {
 
 body {
   overflow: visible;
+  background-color: darken(#fff, 1%);
+}
+
+.compensate-for-scrollbar {
+  @include respond-to(550) {
+    margin-right: 0 !important;
+  }
 }
 
 .mainHeader {
@@ -838,6 +845,11 @@ body {
   }
 }
 
+.bgbg {
+  box-shadow: 0 0 10px 0 #000;
+  background-color: #fff;
+}
+
 .partners {
 
   .headerWithLine {
@@ -954,8 +966,13 @@ body {
     margin: 0 auto;
     max-width: 320px;
     width: 100%;
+    height: 100%;
     @include respond-to(350) {
       max-width: 300px;
+    }
+
+    .field-consultform-comments {
+      height: 100%;
     }
   }
 
@@ -989,7 +1006,7 @@ body {
   }
 
   &__textarea {
-    height: 180px;
+    height: 100%;
     resize: none;
   }
 
@@ -2079,6 +2096,12 @@ body {
   &__bottomInner {
     display: flex;
     justify-content: space-around;
+  }
+
+  .catalogBrick__item {
+    flex: 0 0 390px;
+    width: 390px;
+    height: 390px;
   }
 
   &__bottomItem {

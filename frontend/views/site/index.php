@@ -76,11 +76,10 @@ $this->params['name'] = $model->name;
 <div class="map">
     <div class="map__map" id="map"></div>
     <div class="map__content">
-        <a href="tel:+79166507581" class="map__contentPhone">+7 916 650-75-81</a>
+        <a href="tel:+79859917387" class="map__contentPhone">+7 (985) 991-73-87</a>
         <a href="mailto:info@orbat.ru" class="map__contentEmail">info@orbat.ru</a>
-        <div class="map__contentText">Юридический адрес:<br>
-            119634, г. Москва ул. Шолохова<br>
-            д.13 офис 1А.
+        <div class="map__contentText">
+            ООО ОРБАТ: 119530, г. Москва, Очаковское ш., д. 28 стр. 2<br>эт. 3 пом. III ком.8
         </div>
     </div>
 </div>

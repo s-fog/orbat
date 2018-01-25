@@ -132,7 +132,7 @@ class DesListPlitka {
         } else {
             this.nodes.list.show();
             this.nodes.plitka.hide();
-            flexGridAddElements('designersList__bottomInner', 'designersList__bottomItem', 'designersList__bottomItem_hide');
+            flexGridAddElements('designersList__bottomInner', 'catalogBrick__item', 'catalogBrick__item_hide');
         }
     }
 }
@@ -206,7 +206,7 @@ class Application {
         flexGridAddElements('partnersPage__inner', 'partnersPage__item', 'partnersPage__item_hide');
         flexGridAddElements('partnersPage__inner', 'partnersPage__item', 'partnersPage__item_hide');
         flexGridAddElements('catalogPlitka__inner', 'catalogPlitka__item', 'catalogPlitka__item_hide');
-        flexGridAddElements('designersList__bottomInner', 'designersList__bottomItem', 'designersList__bottomItem_hide');
+        flexGridAddElements('designersList__bottomInner', 'catalogBrick__item', 'catalogBrick__item_hide');
 
         $('.video__slider').owlCarousel({
             items: 1,
@@ -321,7 +321,7 @@ class Application {
         if ($('#map').get(0)) {
             ymaps.ready(function () {
                 var myMap = new ymaps.Map('map', {
-                        center: [55.757830, 37.582511],
+                        center: [55.695870, 37.458283],
                         zoom: 15
                     }, {
                         searchControlProvider: 'yandex#search'
