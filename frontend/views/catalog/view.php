@@ -37,8 +37,12 @@ $this->params['name'] = $model->name;
                         </li>
                         <?php if (!empty($model->designer2_id)) { ?>
                             <li>
-                                - <a href="<?=Url::to(['textpage/index', 'alias' => Textpage::findOne(7)->alias])?>?id=<?=$model->designer2->id?>"
-                                     class="product__feature link"><?=$model->designer2->name?></a>
+                                <?php if ($model->designer2->show_on_page == 1) { ?>
+                                    - <a href="<?=Url::to(['textpage/index', 'alias' => Textpage::findOne(7)->alias])?>?id=<?=$model->designer2->id?>"
+                                         class="product__feature link"><?=$model->designer2->name?></a>
+                                <?php } else { ?>
+                                    - <span class="product__feature link"><?=$model->designer2->name?></span>
+                                <?php } ?>
                             </li>
                         <?php } ?>
                     </ul>
