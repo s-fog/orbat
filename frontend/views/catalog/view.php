@@ -41,7 +41,7 @@ $this->params['name'] = $model->name;
                                     - <a href="<?=Url::to(['textpage/index', 'alias' => Textpage::findOne(7)->alias])?>?id=<?=$model->designer2->id?>"
                                          class="product__feature link"><?=$model->designer2->name?></a>
                                 <?php } else { ?>
-                                    - <span class="product__feature link"><?=$model->designer2->name?></span>
+                                    - <span class="product__feature"><?=$model->designer2->name?></span>
                                 <?php } ?>
                             </li>
                         <?php } ?>
