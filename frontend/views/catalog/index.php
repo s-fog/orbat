@@ -229,7 +229,6 @@ $this->params['name'] = $model->name;
                                 - <a href="<?=Url::to(['textpage/index', 'alias' => Textpage::findOne(7)->alias])?>?id=<?=$product->designer->id?>"
                                      class="product__feature link"><?=$product->designer->name?></a>
                             </li>
-                            <?=$product->designer2->show_on_page ?>
                             <?php if (!empty($product->designer2_id)) { ?>
                                 <li>
                                     <?php if ($product->designer2->show_on_page == 1) {?>
