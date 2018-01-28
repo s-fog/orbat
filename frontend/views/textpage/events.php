@@ -18,7 +18,8 @@ $this->params['name'] = $model->name;
                 $filename = basename($event->image);
                 $filename = explode('.', $filename);
                 if ($event->id == 3) {
-                    $url = Url::to(['catalog/view', 'alias' => Product::findOne(3)->alias]);
+                    $product = Product::findOne(3);
+                    $url = Url::to(['catalog/view', 'alias1' => $product->category->alias, 'alias2' => $product->alias]);
                 } else {
                     $url = '#';
                 }
