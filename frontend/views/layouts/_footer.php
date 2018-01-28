@@ -50,7 +50,7 @@ use yii\widgets\ActiveForm;
                 <div class="socials">
                     <a href="#" rel="nofollow" target="_blank" class="socials__item" style="background-image: url(/img/facebook.png);"></a>
                     <a href="#" rel="nofollow" target="_blank" class="socials__item" style="background-image: url(/img/vk.png);"></a>
-                    <a href="#" rel="nofollow" target="_blank" class="socials__item" style="background-image: url(/img/youttube.png);"></a>
+                    <a href="https://www.youtube.com/channel/UCGMBncLEs1qFFLdT89keRGg" rel="nofollow" target="_blank" class="socials__item" style="background-image: url(/img/youttube.png);"></a>
                     <a href="#" rel="nofollow" target="_blank" class="socials__item" style="background-image: url(/img/inta.png);"></a>
                 </div>
             </div>
@@ -111,7 +111,7 @@ $form = ActiveForm::begin([
     <?= $form->field($callbackForm, 'pol', [
         'template' => "<label class=\"checkbox\">
                             {input}
-                            <span>Заказываю консультацию, Вы соглашаетесь с условиями обработки персональных данных. </span>
+                            <span>Заказывая консультацию, Вы соглашаетесь с условиями обработки персональных данных. </span>
                        </label>{error}",
     ])->checkbox([],false) ?>
 

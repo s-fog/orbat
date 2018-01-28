@@ -16,7 +16,7 @@ $this->params['name'] = $model->name;
     <div class="socials">
         <a href="#" rel="nofollow" target="_blank" class="socials__item" style="background-image: url(/img/facebook.png);"></a>
         <a href="#" rel="nofollow" target="_blank" class="socials__item" style="background-image: url(/img/vk.png);"></a>
-        <a href="#" rel="nofollow" target="_blank" class="socials__item" style="background-image: url(/img/youttube.png);"></a>
+        <a href="https://www.youtube.com/channel/UCGMBncLEs1qFFLdT89keRGg" rel="nofollow" target="_blank" class="socials__item" style="background-image: url(/img/youttube.png);"></a>
         <a href="#" rel="nofollow" target="_blank" class="socials__item" style="background-image: url(/img/inta.png);"></a>
     </div>
 </div>
