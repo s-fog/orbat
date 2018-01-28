@@ -1,5 +1,6 @@
 <?php
 
+use common\models\Product;
 use common\models\Textpage;
 use yii\helpers\Url;
 
@@ -16,7 +17,12 @@ $this->params['name'] = $model->name;
             <?php foreach($events as $event) {
                 $filename = basename($event->image);
                 $filename = explode('.', $filename);
-                $url = Url::to(['textpage/view', 'alias1' => Textpage::findOne(2)->alias, 'alias2' => $event->alias])
+                if ($id == 3) {
+                    $url = Url::to(['catalog/view', 'alias' => Product::findOne(3)->alias]);
+                } else {
+                    $url = '#';
+                }
+                //$url = Url::to(['textpage/view', 'alias1' => Textpage::findOne(2)->alias, 'alias2' => $event->alias])
                 ?>
                 <div class="news__item"
                      style="background-image: url(/images/thumbs/<?=$filename[0]?>-1200-400.<?=$filename[1]?>);">
