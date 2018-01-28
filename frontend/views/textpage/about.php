@@ -37,3 +37,5 @@ $this->params['name'] = $model->name;
         </div>
     </div>
 </div>
+
+<?=$this->render('@frontend/views/blocks/video')?>

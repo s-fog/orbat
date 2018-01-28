@@ -71,12 +71,10 @@ class SiteController extends Controller
         $model = Mainpage::findOne(1);
         $designers = Designer::find()->where(['show_on_page' => 1])->all();
         $partners = Partner::find()->all();
-        $videos = Video::find()->all();
         return $this->render('index', [
             'model' => $model,
             'designers' => $designers,
-            'partners' => $partners,
-            'videos' => $videos,
+            'partners' => $partners
         ]);
     }
 
