@@ -13,12 +13,7 @@ $this->params['name'] = $model->name;
     <div class="contactsPage__text">Толстой Андрей Валерьевич</div>
     <div class="contactsPage__text">ООО ОРБАТ: 119530, г. Москва, Очаковское ш., д. 28 стр. 2 эт. 3 пом. III ком.8</div>
     <a href="#" class="contactsPage__button">карточка организации</a>
-    <div class="socials">
-        <a href="#" rel="nofollow" target="_blank" class="socials__item" style="background-image: url(/img/facebook.png);"></a>
-        <a href="#" rel="nofollow" target="_blank" class="socials__item" style="background-image: url(/img/vk.png);"></a>
-        <a href="https://www.youtube.com/channel/UCGMBncLEs1qFFLdT89keRGg" rel="nofollow" target="_blank" class="socials__item" style="background-image: url(/img/youttube.png);"></a>
-        <a href="https://www.instagram.com/orbat.ru/" rel="nofollow" target="_blank" class="socials__item" style="background-image: url(/img/inta.png);"></a>
-    </div>
+    <?=$this->render('@frontend/views/blocks/socials')?>
 </div>
 
 <?=$this->render('@frontend/views/blocks/consult_form')?>
