@@ -21,9 +21,8 @@ $this->params['name'] = $model->name;
                     $product = Product::findOne(3);
                     $url = Url::to(['catalog/view', 'alias1' => $product->category->alias, 'alias2' => $product->alias]);
                 } else {
-                    $url = '#';
+                    $url = Url::to(['textpage/view', 'alias1' => Textpage::findOne(2)->alias, 'alias2' => $event->alias]);
                 }
-                //$url = Url::to(['textpage/view', 'alias1' => Textpage::findOne(2)->alias, 'alias2' => $event->alias])
                 ?>
                 <div class="news__item"
                      style="background-image: url(/images/thumbs/<?=$filename[0]?>-1200-400.<?=$filename[1]?>);">

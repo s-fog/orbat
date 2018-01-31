@@ -85,6 +85,7 @@ class TextpageController extends Controller
     }
 
     public function actionView($alias1, $alias2) {
+        $this->layout = 'textpage';
         $parent = Textpage::find()->where(['alias' => $alias1])->one();
 
         if ($parent->id == 2) {
