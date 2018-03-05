@@ -497,6 +497,7 @@ class Application {
                 'slideShow',
                 'fullScreen',
                 'thumbs',
+                'share',
                 'close'
             ],
         });
