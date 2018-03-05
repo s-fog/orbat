@@ -39,6 +39,44 @@ class MapContent {
     }
 }
 
+class TopButton {
+    constructor(root) {
+        this.root = root;
+
+        this._cacheNodes();
+        this._bindEvents();
+        this._ready();
+    }
+
+    _cacheNodes() {
+        this.nodes = {
+            topButton: $('.topButton')
+        }
+    }
+
+    _bindEvents() {
+        $(window).scroll(() => {
+            this.do();
+        });
+
+        this.nodes.topButton.click(() => {
+            $("html, body").animate({ scrollTop: 0 }, 300);
+        });
+    }
+
+    _ready() {
+        this.do();
+    }
+
+    do() {
+        if ($(window).scrollTop() > 100) {
+            $('.topButton').stop().fadeIn();
+        } else {
+            $('.topButton').stop().fadeOut();
+        }
+    }
+}
+
 class Filter {
     constructor(root) {
         this.root = root;
@@ -454,12 +492,13 @@ class Application {
             }
         }
 
-        $(".catalogList__sliderItem").fancybox({
-            loop: true
-        });
-
-        $('[data-fancybox="productImages"]').fancybox({
-            loop: true
+        $('.catalogList__sliderItem, [data-fancybox="productImages"]').fancybox({
+            buttons : [
+                'slideShow',
+                'fullScreen',
+                'thumbs',
+                'close'
+            ],
         });
     }
 
@@ -468,6 +507,7 @@ class Application {
         new DesListPlitka();
         new CatalogListPlitka();
         new Filter($('#filter'));
+        new TopButton();
     }
 }
 

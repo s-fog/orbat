@@ -3307,3 +3307,34 @@ body {
 .fancybox-container {
   font-family: $font-family;
 }
+
+.topButton {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 5;
+  width: 80px;
+  height: 80px;
+  background-image: url(../img/Top1.png);
+  background-size: 100% 100%;
+  cursor: pointer;
+}
+
+.fancybox-button {
+  width: 88px;
+  height: 88px;
+}
+
+.fancybox-navigation button:before {
+  width: 80px;
+  height: 80px;
+}
+.fancybox-navigation button {
+  width: 95px;
+  height: 135px;
+}
+.fancybox-button svg {
+  width: 52px;
+  height: 52px;
+}

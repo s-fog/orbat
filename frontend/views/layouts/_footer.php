@@ -1,5 +1,6 @@
 <?php
 
+use common\models\Category;
 use common\models\Textpage;
 use frontend\models\CallbackForm;
 use frontend\models\SubscribeForm;
@@ -31,9 +32,9 @@ use yii\widgets\ActiveForm;
                         <li>
                             <a href="/catalog" class="mainFooter__menu2Link"><span>Проекты</span></a>
                             <ul class="mainFooter__menu2Inner">
-                                <li><a href="#" class="mainFooter__menu2InnerLink"><span>Строительство</span></a></li>
-                                <li><a href="#" class="mainFooter__menu2InnerLink"><span>Ремонт</span></a></li>
-                                <li><a href="#" class="mainFooter__menu2InnerLink"><span>Реконструкция</span></a></li>
+                                <?php foreach(Category::find()->where('id <> 4')->all() as $index => $category) { ?>
+                                    <li><a href="<?=Url::to(['catalog/index', 'alias1' => $category->alias])?>" class="mainFooter__menu2InnerLink"><span><?=$category->name?></span></a></li>
+                                <?php } ?>
                             </ul>
                         </li>
                         <?=Textpage::liLink(7, 'mainFooter__menu2Link')?>
@@ -52,6 +53,8 @@ use yii\widgets\ActiveForm;
         </div>
     </div>
 </div>
+
+<div class="topButton"></div>
 
 <?php
 $sibscribeForm = new SubscribeForm();
