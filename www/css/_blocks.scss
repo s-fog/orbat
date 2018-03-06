@@ -3314,11 +3314,16 @@ body {
   bottom: 20px;
   right: 20px;
   z-index: 5;
-  width: 80px;
-  height: 80px;
+  width: 110px;
+  height: 110px;
   background-image: url(../img/Top1.png);
   background-size: 100% 100%;
   cursor: pointer;
+
+  @include respond-to(600) {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 .fancybox-button {
