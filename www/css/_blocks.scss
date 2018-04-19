@@ -2653,6 +2653,9 @@ body {
   position: relative;
   flex: 0 0 395px;
   width: 395px;
+  @include respond-to(550) {
+    margin-top: 10px;
+  }
   @include respond-to(500) {
     flex: 0 0 100%;
   }
