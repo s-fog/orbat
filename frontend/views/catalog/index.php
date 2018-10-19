@@ -225,10 +225,12 @@ $this->params['name'] = $model->name;
                         <div class="product__name"><?=$product->name?></div>
                         <div class="product__feature">Авторы проекта:</div>
                         <ul class="product__author">
-                            <li>
+                            <?php if ($product->designer->show_on_page == 1) {?>
                                 - <a href="<?=Url::to(['textpage/index', 'alias' => Textpage::findOne(7)->alias])?>?id=<?=$product->designer->id?>"
                                      class="product__feature link"><?=$product->designer->name?></a>
-                            </li>
+                            <?php } else { ?>
+                                - <span class="product__feature"><?=$product->designer->name?></span>
+                            <?php } ?>
                             <?php if (!empty($product->designer2_id)) { ?>
                                 <li>
                                     <?php if ($product->designer2->show_on_page == 1) {?>
@@ -248,7 +250,9 @@ $this->params['name'] = $model->name;
                         <div class="product__feature">Объект: <?=$product->object?></div>
                         <div class="product__feature">Общая площадь: <?=$product->area?> m<sup>2</sup></div>
                         <div class="product__feature">Реализация: <?=$product->realization?></div>
-                        <div class="product__plan" data-fancybox data-src="<?=$product->plan?>">План объекта</div><br>
+                        <?php if (!empty($product->plan)) { ?>
+                            <div class="product__plan" data-fancybox data-src="<?=$product->plan?>">План объекта</div><br>
+                        <?php } ?>
                         <a href="<?=Url::to(['catalog/view', 'alias1' => $product->category->alias, 'alias2' => $product->alias])?>" class="catalogList__button">подробнее о проекте</a>
                     </div>
                 </div>
