@@ -4,6 +4,7 @@ namespace backend\controllers;
 
 use backend\models\UploadFile;
 use common\models\Product;
+use himiklab\sortablegrid\SortableGridAction;
 
 /**
 * This is the class for controller "ProductController".

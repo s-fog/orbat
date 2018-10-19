@@ -1,5 +1,6 @@
 <?php
 
+use himiklab\sortablegrid\SortableGridView;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\grid\GridView;
@@ -42,7 +43,7 @@ $actionColumnTemplateString = '<div class="action-buttons">'.$actionColumnTempla
     <hr />
 
     <div class="table-responsive">
-        <?= GridView::widget([
+        <?= SortableGridView::widget([
         'dataProvider' => $dataProvider,
         'pager' => [
         'class' => yii\widgets\LinkPager::className(),

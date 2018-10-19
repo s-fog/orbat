@@ -6,6 +6,7 @@ namespace backend\controllers\base;
 
 use common\models\Product;
     use common\models\ProductSearch;
+use himiklab\sortablegrid\SortableGridAction;
 use yii\web\Controller;
 use yii\web\HttpException;
 use yii\helpers\Url;
@@ -24,6 +25,16 @@ class ProductController extends Controller
 * CSRF validation is enabled only when both this property and [[Request::enableCsrfValidation]] are true.
 */
 public $enableCsrfValidation = false;
+
+    public function actions()
+    {
+        return [
+            'sort' => [
+                'class' => SortableGridAction::className(),
+                'modelName' => Product::className(),
+            ],
+        ];
+    }
 
 
 /**

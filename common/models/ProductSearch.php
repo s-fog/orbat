@@ -18,7 +18,7 @@ class ProductSearch extends Product
 public function rules()
 {
 return [
-[['id'], 'integer'],
+[['id', 'sortOrder'], 'integer'],
             [['name', 'alias', 'object', 'area', 'realization', 'image1', 'image2', 'image3', 'image4', 'image5', 'image6', 'image7', 'image8', 'image9', 'image10', 'image11', 'seo_title', 'seo_keywords', 'seo_h1', 'seo_description'], 'safe'],
 ];
 }
@@ -41,7 +41,7 @@ return Model::scenarios();
 */
 public function search($params)
 {
-$query = Product::find();
+$query = Product::find()->orderBy(['sortOrder' => SORT_DESC]);
 
 $dataProvider = new ActiveDataProvider([
 'query' => $query,
