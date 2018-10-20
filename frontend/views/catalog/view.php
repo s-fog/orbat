@@ -31,10 +31,12 @@ $this->params['name'] = $model->name;
                     <div class="product__name"><?=$model->name?></div>
                     <div class="product__feature">Авторы проекта:</div>
                     <ul class="product__author">
-                        <li>
+                        <?php if ($model->designer->show_on_page == 1) { ?>
                             - <a href="<?=Url::to(['textpage/index', 'alias' => Textpage::findOne(7)->alias])?>?id=<?=$model->designer->id?>"
                                  class="product__feature link"><?=$model->designer->name?></a>
-                        </li>
+                        <?php } else { ?>
+                            - <span class="product__feature"><?=$model->designer->name?></span>
+                        <?php } ?>
                         <?php if (!empty($model->designer2_id)) { ?>
                             <li>
                                 <?php if ($model->designer2->show_on_page == 1) { ?>
@@ -49,7 +51,9 @@ $this->params['name'] = $model->name;
                     <div class="product__feature">Объект: <?=$model->object?></div>
                     <div class="product__feature">Общая площадь: <?=$model->area?> m<sup>2</sup></div>
                     <div class="product__feature">Реализация: <?=$model->realization?></div>
-                    <div class="product__plan" data-fancybox data-src="<?=$model->plan?>">План объекта</div><br>
+                    <?php if (!empty($model->plan)) { ?>
+                        <div class="product__plan" data-fancybox data-src="<?=$model->plan?>">План объекта</div><br>
+                    <?php } ?>
                 </div>
             </div>
             <?php
