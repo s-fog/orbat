@@ -50,6 +50,7 @@ class CatalogController extends Controller
                 ->andWhere($realizationAndWhere)
                 ->andWhere($designerAndWhere)
                 ->andWhere($queryAndWhere)
+                ->orderBy(['sortOrder' => SORT_DESC])
                 ->all();
         } else {
             $model = Category::find()->where(['alias' => $alias1])->one();
@@ -60,6 +61,7 @@ class CatalogController extends Controller
                 ->andWhere($realizationAndWhere)
                 ->andWhere($designerAndWhere)
                 ->andWhere($queryAndWhere)
+                ->orderBy(['sortOrder' => SORT_DESC])
                 ->all();
         }
 
