@@ -3,7 +3,7 @@
 use common\models\Product;
 
 $objects = Product::find()
-    ->orderBy('id')
+    ->orderBy(['sortOrder' => SORT_DESC])
     ->limit(9)
     ->all();
 
