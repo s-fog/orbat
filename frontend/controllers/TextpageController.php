@@ -53,7 +53,7 @@ class TextpageController extends Controller
                 case 4: {
                     $video_reviews = VideoReview::find()->all();
                     $reviews = Review::find()->all();
-                    $letter_reviews = LetterReview::find()->all();
+                    $letter_reviews = LetterReview::find()->orderBy(['sortOrder' => SORT_DESC])->all();
                     return $this->render('reviews', [
                         'model' => $model,
                         'video_reviews' => $video_reviews,
