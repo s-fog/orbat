@@ -846,7 +846,7 @@ body {
 }
 
 .bgbg {
-  box-shadow: 0 0 20px 0 lighten(#000, 30%);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
   background-color: #fff;
 }
 
@@ -2096,6 +2096,7 @@ body {
   &__bottomInner {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
   }
 
   .catalogBrick__item {
