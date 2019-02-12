@@ -13,6 +13,7 @@
                     ['label' => 'Дизайнеры и архитекторы', 'url' => ['/designer/index']],
                     ['label' => 'Отзывы', 'url' => ['/review/index']],
                     ['label' => 'Видео отзывы', 'url' => ['/video-review/index']],
+                    ['label' => 'Благодарственные письма', 'url' => ['/letter-review/index']],
                     ['label' => 'Партнеры', 'url' => ['/partner/index']],
                     ['label' => 'Видео', 'url' => ['/video/index']],
                     ['label' => 'События', 'url' => ['/event/index']],

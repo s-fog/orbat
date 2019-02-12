@@ -3,6 +3,7 @@ namespace frontend\controllers;
 
 use common\models\Designer;
 use common\models\Event;
+use common\models\LetterReview;
 use common\models\Partner;
 use common\models\Review;
 use common\models\Textpage;
@@ -52,10 +53,12 @@ class TextpageController extends Controller
                 case 4: {
                     $video_reviews = VideoReview::find()->all();
                     $reviews = Review::find()->all();
+                    $letter_reviews = LetterReview::find()->all();
                     return $this->render('reviews', [
                         'model' => $model,
                         'video_reviews' => $video_reviews,
-                        'reviews' => $reviews
+                        'reviews' => $reviews,
+                        'letter_reviews' => $letter_reviews,
                     ]);
                 }
                 case 5: {

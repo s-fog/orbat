@@ -36,3 +36,25 @@ $this->params['name'] = $model->name;
         </div>
     </div>
 </div>
+
+<div class="container">
+    <div class="headerWithLine headerWithLine_small"><span>Благодарственные письма</span></div>
+</div>
+
+<div class="letterReviews">
+    <div class="container">
+        <div class="letterReviews__inner">
+            <?php foreach($letter_reviews as $review) {
+                $filename = basename($review->image);
+                $filename = explode('.', $filename);
+                ?>
+                <div data-fancybox="letterReviews"
+                   data-src="<?=$review->image?>"
+                   class="letterReviews__item">
+                    <div class="letterReviews__itemInner" style="background-image: url(/images/thumbs/<?=$filename[0]?>-245-337.<?=$filename[1]?>);"></div>
+                </div>
+            <?php } ?>
+
+        </div>
+    </div>
+</div>

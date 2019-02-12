@@ -57,7 +57,7 @@ class Product extends BaseProduct
     public $slider_image_small5_file;
     public $plan_file;
 
-public function behaviors()
+    public function behaviors()
     {
         return ArrayHelper::merge(
             parent::behaviors(),

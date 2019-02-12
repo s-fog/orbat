@@ -3346,3 +3346,34 @@ body {
   width: 52px;
   height: 52px;
 }
+
+.letterReviews {
+
+  &__inner {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 10px;
+    flex: 0 0 387px;
+    height: 546px;
+    background: url(../img/rm.jpg) no-repeat center center;
+    cursor: pointer;
+    @include respond-to(450) {
+      flex-shrink: 1;
+    }
+  }
+
+  &__itemInner {
+    position: absolute;
+    top: 114px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 245px;
+    height: 337px;
+  }
+}
