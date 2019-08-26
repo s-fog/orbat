@@ -5,12 +5,28 @@ namespace backend\controllers;
 use backend\models\UploadFile;
 use common\models\Product;
 use himiklab\sortablegrid\SortableGridAction;
+use yii\filters\AccessControl;
 
 /**
 * This is the class for controller "ProductController".
 */
 class ProductController extends \backend\controllers\base\ProductController
 {
+    public function behaviors()
+    {
+        return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
+        ];
+    }
+
     public function actionCreate()
     {
         $model = new Product;

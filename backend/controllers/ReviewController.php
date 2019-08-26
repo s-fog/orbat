@@ -4,12 +4,28 @@ namespace backend\controllers;
 
 use backend\models\UploadFile;
 use common\models\Review;
+use yii\filters\AccessControl;
 
 /**
 * This is the class for controller "ReviewController".
 */
 class ReviewController extends \backend\controllers\base\ReviewController
 {
+    public function behaviors()
+    {
+        return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
+        ];
+    }
+
     public function actionCreate()
     {
         $model = new Review;

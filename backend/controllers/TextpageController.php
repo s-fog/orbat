@@ -3,12 +3,28 @@
 namespace backend\controllers;
 
 use common\models\Textpage;
+use yii\filters\AccessControl;
 
 /**
 * This is the class for controller "TextpageController".
 */
 class TextpageController extends \backend\controllers\base\TextpageController
 {
+    public function behaviors()
+    {
+        return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
+        ];
+    }
+
     public function actionCreate()
     {
         $model = new Textpage;

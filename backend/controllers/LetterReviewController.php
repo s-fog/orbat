@@ -5,12 +5,28 @@ namespace backend\controllers;
 use backend\models\UploadFile;
 use common\models\LetterReview;
 use himiklab\sortablegrid\SortableGridAction;
+use yii\filters\AccessControl;
 
 /**
 * This is the class for controller "LetterReviewController".
 */
 class LetterReviewController extends \backend\controllers\base\LetterReviewController
 {
+
+    public function behaviors()
+    {
+        return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
+        ];
+    }
 
     public function actions()
     {

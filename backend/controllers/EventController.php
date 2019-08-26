@@ -4,12 +4,28 @@ namespace backend\controllers;
 
 use backend\models\UploadFile;
 use common\models\Event;
+use yii\filters\AccessControl;
 
 /**
 * This is the class for controller "EventController".
 */
 class EventController extends \backend\controllers\base\EventController
 {
+    public function behaviors()
+    {
+        return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
+        ];
+    }
+
     public function actionCreate()
     {
         $model = new Event;

@@ -3,12 +3,28 @@
 namespace backend\controllers;
 
 use common\models\Video;
+use yii\filters\AccessControl;
 
 /**
 * This is the class for controller "VideoController".
 */
 class VideoController extends \backend\controllers\base\VideoController
 {
+    public function behaviors()
+    {
+        return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
+        ];
+    }
+
     public function actionCreate()
     {
         $model = new Video;

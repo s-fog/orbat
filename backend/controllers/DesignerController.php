@@ -4,12 +4,28 @@ namespace backend\controllers;
 
 use backend\models\UploadFile;
 use common\models\Designer;
+use yii\filters\AccessControl;
 
 /**
 * This is the class for controller "DesignerController".
 */
 class DesignerController extends \backend\controllers\base\DesignerController
 {
+    public function behaviors()
+    {
+        return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
+        ];
+    }
+
     public function actionCreate()
     {
         $model = new Designer;
