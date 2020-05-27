@@ -18,7 +18,7 @@ class DesignerSearch extends Designer
 public function rules()
 {
 return [
-[['id'], 'integer'],
+[['id', 'sortOrder'], 'integer'],
             [['name', 'alias', 'product_text', 'text', 'image', 'studio', 'address', 'phone1', 'phone2', 'email', 'site', 'seo_title', 'seo_keywords', 'seo_h1', 'seo_description'], 'safe'],
 ];
 }
@@ -41,10 +41,11 @@ return Model::scenarios();
 */
 public function search($params)
 {
-$query = Designer::find();
+$query = Designer::find()->orderBy(['sortOrder' => SORT_DESC]);
 
 $dataProvider = new ActiveDataProvider([
 'query' => $query,
+    'pagination' => false
 ]);
 
 $this->load($params);

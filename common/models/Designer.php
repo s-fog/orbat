@@ -2,6 +2,7 @@
 
 namespace common\models;
 
+use himiklab\sortablegrid\SortableGridBehavior;
 use Yii;
 use \common\models\base\Designer as BaseDesigner;
 use yii\behaviors\SluggableBehavior;
@@ -24,6 +25,10 @@ public function behaviors()
                     'attribute' => 'name',
                     'slugAttribute' => 'alias',
                     'immutable' => true
+                ],
+                'sort' => [
+                    'class' => SortableGridBehavior::className(),
+                    'sortableAttribute' => 'sortOrder'
                 ],
             ]
         );

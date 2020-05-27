@@ -45,6 +45,7 @@ $query = Product::find()->orderBy(['sortOrder' => SORT_DESC]);
 
 $dataProvider = new ActiveDataProvider([
 'query' => $query,
+    'pagination' => false
 ]);
 
 $this->load($params);

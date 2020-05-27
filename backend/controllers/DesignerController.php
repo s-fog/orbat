@@ -4,6 +4,8 @@ namespace backend\controllers;
 
 use backend\models\UploadFile;
 use common\models\Designer;
+use common\models\Product;
+use himiklab\sortablegrid\SortableGridAction;
 use yii\filters\AccessControl;
 
 /**
@@ -22,6 +24,16 @@ class DesignerController extends \backend\controllers\base\DesignerController
                         'roles' => ['@'],
                     ],
                 ],
+            ],
+        ];
+    }
+
+    public function actions()
+    {
+        return [
+            'sort' => [
+                'class' => SortableGridAction::className(),
+                'modelName' => Designer::className(),
             ],
         ];
     }

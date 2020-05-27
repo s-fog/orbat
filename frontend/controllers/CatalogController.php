@@ -14,53 +14,42 @@ class CatalogController extends Controller
 {
     public function actionIndex($alias1 = '')
     {
-        $typeAndWhere = [];
+        $query = Product::find();
+
         if (!empty($_REQUEST['type'])) {
-            $typeAndWhere = ['type' => $_REQUEST['type']];
+            $query->andWhere(['type' => $_REQUEST['type']]);
         }
 
-        $areaAndWhere = '';
         if (!empty($_REQUEST['area'])) {
             $area = explode('-', $_REQUEST['area']);
             $areaFrom = $area[0] * 1;
             $areaTo = $area[1] * 1;
-            $areaAndWhere = 'area >= ' . $areaFrom . ' AND area <= ' . $areaTo;
+            $query->andWhere('area >= ' . $areaFrom . ' AND area <= ' . $areaTo);
         }
 
-        $realizationAndWhere = [];
         if (!empty($_REQUEST['realization'])) {
-            $realizationAndWhere = ['realization' => $_REQUEST['realization']];
+            $query->andWhere(['realization' => $_REQUEST['realization']]);
         }
 
-        $designerAndWhere = [];
         if (!empty($_REQUEST['designer'])) {
-            $designerAndWhere = ['designer_id' => $_REQUEST['designer']];
+            $query->andWhere(['or',
+                ['designer_id' => $_REQUEST['designer']],
+                ['designer2_id' => $_REQUEST['designer']]
+            ]);
         }
 
-        $queryAndWhere = '';
         if (!empty($_REQUEST['query'])) {
-            $queryAndWhere = '`name` LIKE \'%'.$_REQUEST['query'].'%\'';
+            $query->andWhere('`name` LIKE \'%'.$_REQUEST['query'].'%\'');
         }
 
         if (empty($alias1)) {
             $model = Category::findOne(4);
-            $products = Product::find()
-                ->andWhere($typeAndWhere)
-                ->andWhere($areaAndWhere)
-                ->andWhere($realizationAndWhere)
-                ->andWhere($designerAndWhere)
-                ->andWhere($queryAndWhere)
+            $products = $query
                 ->orderBy(['sortOrder' => SORT_DESC])
                 ->all();
         } else {
             $model = Category::find()->where(['alias' => $alias1])->one();
-            $products = Product::find()
-                ->where(['category_id' => $model->id])
-                ->andWhere($typeAndWhere)
-                ->andWhere($areaAndWhere)
-                ->andWhere($realizationAndWhere)
-                ->andWhere($designerAndWhere)
-                ->andWhere($queryAndWhere)
+            $products = $query
                 ->orderBy(['sortOrder' => SORT_DESC])
                 ->all();
         }
