@@ -20,6 +20,8 @@ $this->params['name'] = $model->name;
                 if ($event->id == 3) {
                     $product = Product::findOne(3);
                     $url = Url::to(['catalog/view', 'alias1' => $product->category->alias, 'alias2' => $product->alias]);
+                } else if ($event->id == 4) {
+                    $url = 'https://tatlin.ru/shop/interer_ot_pervogo_licza_orbat_2';
                 } else {
                     $url = Url::to(['textpage/view', 'alias1' => Textpage::findOne(2)->alias, 'alias2' => $event->alias]);
                 }
