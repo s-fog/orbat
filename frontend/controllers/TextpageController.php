@@ -9,6 +9,7 @@ use common\models\Review;
 use common\models\Textpage;
 use common\models\VideoReview;
 use Yii;
+use yii\db\Expression;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 
@@ -27,7 +28,7 @@ class TextpageController extends Controller
             switch($model->id) {
                 case 1: $view = 'about';break;
                 case 2: {
-                    $events = Event::find()->all();
+                    $events = Event::find()->orderBy(new Expression('field(id,4,1,2,3)'))->all();
                     return $this->render('events', [
                         'model' => $model,
                         'events' => $events
