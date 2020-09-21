@@ -50,6 +50,7 @@ class CatalogController extends Controller
         } else {
             $model = Category::find()->where(['alias' => $alias1])->one();
             $products = $query
+                ->where(['category_id' => $model->id])
                 ->orderBy(['sortOrder' => SORT_DESC])
                 ->all();
         }
