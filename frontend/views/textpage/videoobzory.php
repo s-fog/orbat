@@ -13,7 +13,6 @@ $this->params['name'] = $model->name;
 use common\models\Video;
 
 $videos = Video::find()
-    ->andWhere(['show_on_main_page' => 1])
     ->orderBy(['id' => SORT_ASC])
     ->all();
 
