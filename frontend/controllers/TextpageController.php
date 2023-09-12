@@ -78,7 +78,7 @@ class TextpageController extends Controller
                         'designers' => $designers
                     ]);
                 }
-                case 8: $view = 'service';break;
+                case 8: $view = 'videoobzory';break;
                 default: throw new NotFoundHttpException();
             }
         } else {

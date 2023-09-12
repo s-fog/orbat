@@ -42,7 +42,8 @@ abstract class Video extends \yii\db\ActiveRecord
         return [
             [['name', 'video_id', 'text'], 'required'],
             [['text', 'seo_description'], 'string'],
-            [['name', 'video_id', 'alias', 'seo_title', 'seo_keywords', 'seo_h1'], 'string', 'max' => 255]
+            [['name', 'video_id', 'alias', 'seo_title', 'seo_keywords', 'seo_h1'], 'string', 'max' => 255],
+            [['show_on_main_page', 'sort_order'], 'integer']
         ];
     }
 
@@ -57,6 +58,7 @@ abstract class Video extends \yii\db\ActiveRecord
             'video_id' => 'Id видео на youtube',
             'text' => 'Текст',
             'alias' => 'Урл',
+            'show_on_main_page' => 'Показывать на главной странице?',
             'seo_title' => 'Seo Title',
             'seo_keywords' => 'Seo Keywords',
             'seo_h1' => 'Seo H1',

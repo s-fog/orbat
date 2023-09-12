@@ -1,0 +1,36 @@
+version: '3.1'
+
+services:
+    php:
+        build: docker/php
+        restart: unless-stopped
+        volumes:
+            - .:/var/www/html:delegated
+
+    nginx:
+        build: docker/nginx
+        restart: unless-stopped
+        ports:
+            - 5722:80
+        volumes:
+            - .:/var/www/html:delegated
+
+    node:
+        image: 'node'
+        working_dir: /app
+        volumes:
+            - .:/app
+
+    mysql:
+        image: mysql:5.7.27
+        restart: unless-stopped
+        command: mysqld --sql_mode=""
+        ports:
+            - 1386:3306
+        volumes:
+            - ./docker/mysql/database:/var/lib/mysql
+        environment:
+            MYSQL_RANDOM_ROOT_PASSWORD: 'yes'
+            MYSQL_DATABASE: database
+            MYSQL_USER: user
+            MYSQL_PASSWORD: password

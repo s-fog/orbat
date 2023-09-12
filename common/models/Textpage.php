@@ -49,7 +49,7 @@ public function behaviors()
         }
 
         $onclick = '';
-        if ($id == 3 || $id == 8) {
+        if ($id == 3) {
             $onclick = ' onclick="return false;"';
         }
 

@@ -16,6 +16,7 @@ class AppAsset extends AssetBundle
         'js/vendor/owl.carousel/dist/assets/owl.carousel.min.css',
         'js/vendor/fancybox/dist/jquery.fancybox.min.css',
         'css/styles.css',
+        'css/new.css',
     ];
     public $js = [
         'js/vendor.js',

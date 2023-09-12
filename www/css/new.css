@@ -1,0 +1,29 @@
+.videoobzory {
+    margin: 40px 0 60px;
+}
+.videoobzory__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+}
+.videoobzory__video iframe {
+    border-radius: 1.5rem;
+    width: 100%;
+    height: 335px;
+}
+.videoobzory__header {
+    margin: 15px 0;
+    padding: 0 15px;
+    font-weight: 900;
+    font-size: 18px;
+}
+.videoobzory__text {
+    padding: 0 15px;
+}
+
+@media (max-width: 550px) {
+    .videoobzory__inner {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 50px;
+    }
+}

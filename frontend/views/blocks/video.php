@@ -2,7 +2,10 @@
 
 use common\models\Video;
 
-$videos = Video::find()->all();
+$videos = Video::find()
+    ->andWhere(['show_on_main_page' => 1])
+    ->orderBy(['id' => SORT_ASC])
+    ->all();
 
 ?>
 <div class="video">

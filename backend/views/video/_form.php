@@ -38,6 +38,7 @@ use yii\helpers\StringHelper;
 
 <!-- attribute text -->
 			<?= $form->field($model, 'text')->textarea(['rows' => 6]) ?>
+			<?= $form->field($model, 'show_on_main_page')->checkbox() ?>
 
         </p>
         <?php $this->endBlock(); ?>
