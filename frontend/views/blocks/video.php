@@ -4,7 +4,7 @@ use common\models\Video;
 
 $videos = Video::find()
     ->andWhere(['show_on_main_page' => 1])
-    ->orderBy(['id' => SORT_ASC])
+    ->orderBy(['id' => SORT_DESC])
     ->all();
 
 ?>
