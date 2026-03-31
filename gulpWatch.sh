@@ -1,0 +1,1 @@
+docker compose run --rm -u "1000:1000" gulp_node ./node_modules/.bin/gulp watch

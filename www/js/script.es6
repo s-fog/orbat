@@ -345,6 +345,17 @@ class Application {
             }
         });
 
+        $('#set-cookie-btn').on('click', function () {
+          $.ajax({
+            url: '/site/set-cookie',
+            type: 'POST',
+            data: {
+              _csrf: yii.getCsrfToken()
+            },
+          });
+          $('#cookies').hide();
+        });
+
         $(window).resize(function() {
             /*if ($(window).width() > 860) {
                 $('.mainHeader__menus').show();

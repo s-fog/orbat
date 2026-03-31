@@ -13,7 +13,11 @@ use yii\widgets\ActiveForm;
         <div class="mainFooter__inner">
             <div class="mainFooter__left">
                 <a href="/" class="mainFooter__logo"></a>
-                <div class="mainFooter__copy">© 1992–2018 ОРБАТ. Все права защищены.</div>
+                <div class="mainFooter__copy">© 1992–<?=date('Y')?> ОРБАТ. Все права защищены.</div>
+                <a href="/data_policy.pdf" target="_blank" class="mainFooter__prav"><span>Политика конфиденциальности</span></a>
+              <br>
+                <a href="/cookie_policy.pdf" target="_blank" class="mainFooter__prav"><span>Политика использования файлов cookie</span></a>
+              <br>
                 <a href="/00_doc.pdf" target="_blank" class="mainFooter__prav"><span>Обработка персональных данных</span></a>
             </div>
             <div class="mainFooter__middle">
@@ -55,6 +59,21 @@ use yii\widgets\ActiveForm;
 </div>
 
 <div class="topButton"></div>
+
+
+<?php
+$cookies = Yii::$app->request->cookies;
+$showButton = !$cookies->has('is_cookies_closed');
+?>
+
+<?php if ($showButton) { ?>
+  <div class="cookies" id="cookies">
+    <div class="cookies__inner">
+      <div class="cookies__text">Продолжая пользоваться сайтом, вы соглашаетесь <a href="/cookie_policy.pdf" target="_blank" class="linkSpan"><span>на обработку файлов cookie</span></a> и других пользовательских данных в соответствии с  <a href="/data_policy.pdf" target="_blank" class="linkSpan"><span>политикой конфиденциальности</span></a>. Заблокировать использование cookies сайтом можно в настройках браузера.</div>
+      <div class="button button_small button_noShadow" id="set-cookie-btn">Разрешить</div>
+    </div>
+  </div>
+<?php } ?>
 
 <?php
 $sibscribeForm = new SubscribeForm();
@@ -106,12 +125,9 @@ $form = ActiveForm::begin([
             'class' => 'callback__input',
             'placeholder' => 'Телефон'
         ])->label(false)?>
-    <?= $form->field($callbackForm, 'pol', [
-        'template' => "<label class=\"checkbox\">
-                            {input}
-                            <span>Заказывая консультацию, Вы соглашаетесь с условиями обработки персональных данных. </span>
-                       </label>{error}",
-    ])->checkbox([],false) ?>
+    <?= $form->field($callbackForm, 'pol')->hiddenInput(['value' => 1])->label(false) ?>
+
+    <div class="mainForm__text">Отправляя заявку, Вы соглашаетесь с <a href="/cookie_policy.pdf" target="_blank"><span>обработкой файлов cookie</span></a> и условиями <a href="/data_policy.pdf" target="_blank"><span>политики конфиденциальности</span></a>.</div>
 
     <button class="callback__submit" type="submit">Заказать консультацию</button>
 

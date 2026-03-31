@@ -102,4 +102,17 @@ class SiteController extends Controller
             return 'error';
         }
     }
+
+    public function actionSetCookie()
+    {
+        $cookies = Yii::$app->response->cookies;
+
+        $cookies->add(new \yii\web\Cookie([
+            'name' => 'is_cookies_closed',
+            'value' => 1,
+            'expire' => time() + 3600 * 24 * 30, // 30 дней
+        ]));
+
+        return $this->asJson(['success' => true]);
+    }
 }

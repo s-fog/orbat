@@ -40,6 +40,7 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                'site/set-cookie' => 'site/set-cookie',
                 'catalog/<alias1>/<alias2>' => 'catalog/view',
                 'catalog/<alias1>' => 'catalog/index',
                 'catalog' => 'catalog/index',
