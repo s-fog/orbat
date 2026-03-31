@@ -50,7 +50,7 @@ use yii\widgets\ActiveForm;
                 <a href="tel:+79859917387" class="mainFooter__phone">+7 (985) 991-73-87</a>
                 <a href="#callback" class="mainFooter__callback" data-fancybox><span>заказать консультацию</span></a>
                 <div class="mainFooter__rightText">Юридический адрес:<br>
-                    <a href="<?=Url::to(['textpage/index', 'alias' => Textpage::findOne(6)->alias])?>" class="linkSpan"><span>ООО ОРБАТ: 119530, г. Москва, Очаковское ш., д. 28 стр. 2 эт. 3 пом. III ком.8</span></a>
+                    <a href="<?=Url::to(['textpage/index', 'alias' => Textpage::findOne(6)->alias])?>" class="linkSpan"><span>ООО ОРБАТ: 119415, г. Москва, Ленинский проспект, д. 126, кв. 35</span></a>
                 </div>
                 <?=$this->render('@frontend/views/blocks/socials')?>
             </div>
