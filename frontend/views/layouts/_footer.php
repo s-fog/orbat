@@ -18,7 +18,7 @@ use yii\widgets\ActiveForm;
               <br>
                 <a href="/cookie_policy.pdf" target="_blank" class="mainFooter__prav"><span>Политика использования файлов cookie</span></a>
               <br>
-                <a href="/00_doc.pdf" target="_blank" class="mainFooter__prav"><span>Обработка персональных данных</span></a>
+                <a href="/cart_org.pdf" target="_blank" class="mainFooter__prav"><span>Карточка организации</span></a>
             </div>
             <div class="mainFooter__middle">
                 <div class="mainFooter__middleLeft">
