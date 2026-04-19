@@ -11,7 +11,7 @@ $this->params['name'] = $model->name;
     <a href="tel:+79859917387" class="contactsPage__phone">+7 (985) 991-73-87</a>
     <a href="mailto:info@orbat.ru" class="contactsPage__email">info@orbat.ru</a>
     <div class="contactsPage__text">Толстой Андрей Валерьевич</div>
-    <div class="contactsPage__text">ООО ОРБАТ: 119530, г. Москва, Очаковское ш., д. 28 стр. 2 эт. 3 пом. III ком.8</div>
+    <div class="contactsPage__text">ООО ОРБАТ: 119415, г. Москва, Ленинский проспект, д. 126, кв. 35</div>
     <a href="/cart_org.pdf" target="_blank" class="contactsPage__button">карточка организации</a>
     <?=$this->render('@frontend/views/blocks/socials')?>
 </div>
